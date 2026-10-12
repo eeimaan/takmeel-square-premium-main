@@ -1,0 +1,303 @@
+/* src/styles.css */
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+@custom-variant motion (&:where(.motion *));
+
+/*
+ * TAKMEEL SQUARE design system.
+ * Palette derived from the brand mark: warm gold on ivory / onyx.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+
+  /* Brand tokens */
+  --color-onyx: var(--onyx);
+  --color-onyx-soft: var(--onyx-soft);
+  --color-ivory: var(--ivory);
+  --color-sand: var(--sand);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-gold-deep: var(--gold-deep);
+  --color-forest: var(--forest);
+  --color-forest-soft: var(--forest-soft);
+
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Jost", system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.125rem;
+
+  --onyx: oklch(0.17 0.006 60);
+  --onyx-soft: oklch(0.24 0.008 60);
+  --ivory: #ffffff;
+  --sand: #dce4df;
+  --gold: oklch(0.76 0.105 85);
+  --gold-soft: oklch(0.86 0.06 88);
+  --gold-deep: oklch(0.62 0.1 80);
+  --forest: #15322d;
+  --forest-soft: #1f443d;
+
+  --background: var(--ivory);
+  --foreground: var(--onyx);
+  --card: #ffffff;
+  --card-foreground: var(--onyx);
+  --popover: #ffffff;
+  --popover-foreground: var(--onyx);
+  --primary: var(--onyx);
+  --primary-foreground: var(--ivory);
+  --secondary: var(--sand);
+  --secondary-foreground: var(--onyx);
+  --muted: var(--sand);
+  --muted-foreground: oklch(0.52 0.012 70);
+  --accent: var(--gold);
+  --accent-foreground: var(--onyx);
+  --destructive: oklch(0.55 0.2 27);
+  --destructive-foreground: var(--ivory);
+  --border: oklch(0.87 0.012 80);
+  --input: oklch(0.87 0.012 80);
+  --ring: var(--gold);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+    min-width: 0;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: var(--gold);
+    color: var(--onyx);
+  }
+}
+
+/* --- Typography utilities --- */
+
+@utility display {
+  font-family: var(--font-display);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-weight: 300;
+  line-height: 0.98;
+  letter-spacing: -0.015em;
+}
+
+@utility eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 400;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+}
+
+@utility rule-line {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    color-mix(in oklab, var(--gold) 70%, transparent),
+    transparent
+  );
+}
+
+/* --- Motion --- */
+
+@utility reveal {
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+@utility reveal-in {
+  &.reveal {
+    opacity: 1;
+    transform: none;
+    transition:
+      opacity 1s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+}
+
+@utility link-underline {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 1px;
+    width: 100%;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+@utility surface-dark {
+  background-color: var(--forest);
+  color: var(--ivory);
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* --- Scroll-driven project focus (only when motion is enabled) --- */
+.motion [data-project] {
+  opacity: 0.35;
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.motion [data-project] .project-img {
+  transform: scale(1.12);
+  transition: transform 1.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.motion [data-project] .project-meta {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.9s ease, transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.motion [data-project].is-active { opacity: 1; }
+.motion [data-project].is-active .project-img { transform: scale(1); }
+.motion [data-project].is-active .project-meta { opacity: 1; transform: none; }
+
+/* --- Accessibility: visible, on-brand focus --- */
+:focus-visible {
+  outline: 1px solid var(--gold);
+  outline-offset: 4px;
+}
+
+/* --- Intro curtain --- */
+@keyframes intro-lift {
+  0%, 55% { clip-path: inset(0 0 0 0); }
+  100% { clip-path: inset(0 0 100% 0); visibility: hidden; }
+}
+@keyframes intro-mark {
+  0% { opacity: 0; transform: translateY(12px); }
+  30%, 60% { opacity: 1; transform: none; }
+  100% { opacity: 0; transform: translateY(-12px); }
+}
+@keyframes intro-line {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+.intro-curtain { animation: intro-lift 1.5s cubic-bezier(0.76, 0, 0.24, 1) forwards; }
+.intro-mark { animation: intro-mark 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+.intro-line { animation: intro-line 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both; }
+@media (prefers-reduced-motion: reduce) {
+  .intro-curtain { display: none; }
+}
+
+/* --- Startup animation v2 --- */
+@keyframes ts-panel { 0%,62% { transform: translateY(0); } 100% { transform: translateY(-100%); } }
+@keyframes ts-panel-b { 0%,66% { transform: translateY(0); } 100% { transform: translateY(-100%); } }
+@keyframes ts-logo { 0% { opacity:0; transform: scale(.7) rotate(-8deg); filter: blur(8px);} 25%,58% { opacity:1; transform:none; filter:none;} 70%{opacity:0; transform: translateY(-30px);} 100%{opacity:0;} }
+@keyframes ts-letter { 0% { opacity:0; transform: translateY(110%);} 100% { opacity:1; transform:none;} }
+@keyframes ts-out { 0%,58% { opacity:1;} 70%,100% { opacity:0;} }
+@keyframes ts-bar { from { transform: scaleX(0);} to { transform: scaleX(1);} }
+.ts-intro { animation: ts-panel-b 2.4s cubic-bezier(.76,0,.24,1) forwards; }
+.ts-intro-gold { animation: ts-panel 2.4s cubic-bezier(.76,0,.24,1) forwards; }
+.ts-logo { animation: ts-logo 2.4s cubic-bezier(.22,1,.36,1) forwards; }
+.ts-letter { display:inline-block; animation: ts-letter .8s cubic-bezier(.22,1,.36,1) both; }
+.ts-words { animation: ts-out 2.4s ease forwards; }
+.ts-bar { animation: ts-bar 1.4s cubic-bezier(.65,0,.35,1) .2s both; transform-origin:left; }
+@media (prefers-reduced-motion: reduce) { .ts-intro, .ts-intro-gold { display:none; } }
+
+@keyframes modal-in { from { opacity:0; transform: translateY(40px) scale(.97); clip-path: inset(10% 0 10% 0);} to { opacity:1; transform:none; clip-path: inset(0);} }
+.modal-in { animation: modal-in .7s cubic-bezier(.22,1,.36,1) both; }
+@keyframes fade-bg { from { opacity:0 } to { opacity:1 } }
+.fade-bg { animation: fade-bg .5s ease both; }
+
+/* Pointer-origin color wash: the button itself remains perfectly still. */
+@property --hover-radius {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+:where(.brand-hover) {
+  position: relative;
+}
+.brand-hover {
+  --hover-fill: var(--gold);
+  background-image: radial-gradient(circle at var(--hover-x, 50%) var(--hover-y, 50%), var(--hover-fill) calc(var(--hover-radius) - 1px), transparent var(--hover-radius));
+  transition: --hover-radius .85s cubic-bezier(.22,1,.36,1), color .65s ease, border-color .65s ease;
+}
+.brand-hover:hover { --hover-radius: var(--hover-reach, 600px); }
+.brand-hover.bg-gold { --hover-fill: var(--forest); }
+.brand-hover.bg-gold:hover { color: var(--ivory) !important; }
+.brand-hover.bg-ivory { --hover-fill: var(--gold); }
+.brand-hover.bg-forest { --hover-fill: var(--gold); }
+.brand-hover.bg-forest:hover, .brand-hover.bg-ivory:hover, .brand-hover.brand-hover-outline:hover, .brand-hover:not(.bg-gold):not(.bg-ivory):not(.bg-forest):hover { color: var(--forest) !important; }
+.brand-hover.bg-gold.brand-hover-invert:hover { color: var(--gold) !important; }
+.brand-hover.bg-gold.brand-hover-invert { --hover-fill: var(--forest); }
+.brand-hover.bg-forest\/70 { --hover-fill: var(--gold); }
+.brand-hover.bg-forest\/70:hover { color: var(--forest) !important; }
+.brand-hover.bg-forest.text-ivory:hover { color: var(--forest) !important; }
+.brand-hover.text-gold-deep:not(.bg-gold):not(.bg-ivory):not(.bg-forest) { --hover-fill: var(--forest); }
+.brand-hover.text-gold-deep:not(.bg-gold):not(.bg-ivory):not(.bg-forest):hover { color: var(--ivory) !important; }
+main img:not(#tour img):not(#hero img) { cursor: zoom-in; }
+@media (hover: hover) {
+  .brand-hover.bg-gold:hover { background-color: var(--gold) !important; }
+  .brand-hover.bg-ivory:hover { background-color: var(--ivory) !important; }
+  .brand-hover.bg-forest:hover { background-color: var(--forest) !important; }
+  .brand-hover[class~="bg-forest/70"]:hover { background-color: color-mix(in oklab, var(--forest) 70%, transparent) !important; }
+  .brand-hover.bg-transparent:hover { background-color: transparent !important; }
+  .brand-hover:hover:not(.bg-gold):not(.bg-ivory):not(.bg-forest):not(.bg-transparent) { background-color: transparent !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .brand-hover { transition-duration: 0ms; }
+  .image-lightbox, .image-lightbox img { transition-duration: 0ms !important; }
+}
+
+/* Cormorant Garamond defaults to old-style figures (uneven digit heights).
+   Use lining figures everywhere so numbers sit level with capitals. */
+html {
+  font-variant-numeric: lining-nums proportional-nums;
+  font-feature-settings: "lnum" 1;
+}
