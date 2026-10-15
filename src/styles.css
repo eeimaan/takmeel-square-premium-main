@@ -51,7 +51,7 @@
   --color-forest: var(--forest);
   --color-forest-soft: var(--forest-soft);
 
-  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-display: "The Seasons", "Cormorant Garamond", Georgia, serif;
   --font-sans: "Jost", system-ui, sans-serif;
 }
 
@@ -300,4 +300,22 @@ main img:not(#tour img):not(#hero img) { cursor: zoom-in; }
 html {
   font-variant-numeric: lining-nums proportional-nums;
   font-feature-settings: "lnum" 1;
+}
+
+/* The Seasons — premium display serif for headings.
+   Drop the font files into public/fonts/ (the-seasons.woff2 / .otf / .ttf,
+   and optionally the-seasons-light.*). Until then headings fall back to Cormorant. */
+@font-face {
+  font-family: "The Seasons";
+  src: url("/fonts/the-seasons-light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "The Seasons";
+  src: url("/fonts/the-seasons.woff2") format("woff2");
+  font-weight: 400 600;
+  font-style: normal;
+  font-display: swap;
 }

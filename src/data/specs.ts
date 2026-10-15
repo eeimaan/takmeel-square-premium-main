@@ -10,7 +10,7 @@ export interface ProjectSpec {
   name: string;
   /** schema.org type used in structured data */
   schemaType: string;
-  /** 1–2 sentence factual summary — written to be quoted by search engines. */
+  /** 1–2 sentence factual summary, written to be quoted by search engines. */
   summary: string;
   rows: { label: string; value: string }[];
   amenities: string[];
@@ -31,7 +31,7 @@ export const projectSpecs: ProjectSpec[] = [
       { label: "A Block", value: "Faces Main Boulevard" },
       { label: "B Block", value: "Faces Glow Park" },
     ],
-    amenities: ["IT Hub", "Builders Mall", "Al-Fatah", "Active piazzas", "CCTV", "Prayer area"],
+    amenities: ["IT Hub", "Builders Mall", "Al-Fatah", "Active piazzas", "CCTV"],
   },
   {
     id: "takmeel-bazaar",
@@ -54,7 +54,7 @@ export const projectSpecs: ProjectSpec[] = [
     name: "Takmeel Homes",
     schemaType: "SingleFamilyResidence",
     summary:
-      "Takmeel Homes are fully built luxury villas in DHA Bahawalpur — 1 Kanal homes in Sector A and 8 and 10 Marla homes in Sector C.",
+      "Takmeel Homes are fully built luxury villas in DHA Bahawalpur, 1 Kanal homes in Sector A and 8 and 10 Marla homes in Sector C.",
     rows: [
       { label: "Location", value: "DHA Bahawalpur" },
       { label: "Sector A", value: "1 Kanal villas" },
@@ -75,11 +75,11 @@ export const projectSpecs: ProjectSpec[] = [
       { label: "Seating", value: "600" },
       { label: "Parking", value: "1,100 spaces, incl. underground" },
     ],
-    amenities: ["Food court", "Illuminated walkways", "Washrooms", "Ablution"],
+    amenities: ["Food court", "Illuminated walkways", "Washrooms"],
   },
 ];
 
-/** Landmarks around Takmeel Square — from the official location map. */
+/** Landmarks around Takmeel Square, from the official location map. */
 export const areaSummary =
   "Takmeel Square sits at the centre of DHA Bahawalpur, next to the DHA Main Gate and the Southern Bypass, about 3.6 KM from Bahawalpur Airport and 4.9 KM from Bahawalpur Cantt.";
 
@@ -90,7 +90,7 @@ export const landmarks: { name: string; detail: string }[] = [
   { name: "Southern Bypass", detail: "Direct access via DHA Main Gate" },
   { name: "DHA Club & Allied Facilities", detail: "Next to Takmeel Square" },
   { name: "DHA Office", detail: "Within DHA Bahawalpur" },
-  { name: "Takmeel Homes — Sector A & C", detail: "Within DHA Bahawalpur" },
+  { name: "Takmeel Homes, Sector A & C", detail: "Within DHA Bahawalpur" },
   { name: "Villa Community", detail: "Within DHA Bahawalpur" },
   { name: "CMH Institute of Medical Sciences", detail: "DHA Bahawalpur" },
   { name: "Cholistan University of Veterinary & Animal Sciences", detail: "Near DHA Bahawalpur" },

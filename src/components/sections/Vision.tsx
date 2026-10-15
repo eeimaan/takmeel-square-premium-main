@@ -19,7 +19,7 @@ const pillars = [
 
 export function Vision() {
   return (
-    <Section id="vision" dark className="py-28 md:py-40">
+    <Section id="vision" dark className="py-16 md:py-24">
       <Shell>
         <Eyebrow index="02">Our vision</Eyebrow>
 
@@ -51,8 +51,7 @@ export function Vision() {
               className="display text-[clamp(1.75rem,3.6vw,3.1rem)] text-ivory"
               data-reveal
             >
-              Takmeel Square seeks to revolutionise Pakistan's commercial real estate
-              with unmatched innovation and meticulous attention to detail.
+              Redefining Pakistan's commercial real estate through innovation and detail.
             </p>
 
             <ul className="mt-14 flex flex-col">
@@ -65,8 +64,8 @@ export function Vision() {
                 >
                   <span className="eyebrow pt-1">0{i + 1}</span>
                   <div className="min-w-0">
-                    <h3 className="display text-2xl text-ivory">{p.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-ivory/55">
+                    <h3 className="display text-3xl text-ivory md:text-4xl">{p.title}</h3>
+                    <p className="mt-3 text-base leading-relaxed text-ivory/70 md:text-lg">
                       {p.body}
                     </p>
                   </div>

@@ -4,7 +4,7 @@ import { whyPoints } from "@/data/amenities";
 
 export function WhyUs() {
   return (
-    <Section id="why" className="py-28 md:py-40">
+    <Section id="why" className="py-16 md:py-24">
       <Shell>
         <div className="grid gap-12 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-20">
           <div>
@@ -24,7 +24,7 @@ export function WhyUs() {
               >
                 <span className="eyebrow">0{i + 1}</span>
                 <h3 className="display mt-5 text-3xl">{p.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                <p className="mt-3 text-base leading-relaxed text-muted-foreground">
                   {p.body}
                 </p>
               </li>

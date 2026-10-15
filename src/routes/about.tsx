@@ -8,7 +8,7 @@ import { Leadership } from "@/components/sections/Leadership";
 import { Vision } from "@/components/sections/Vision";
 export const Route = createFileRoute("/about")({ head: () =>
     seo({
-      title: "About Takmeel Square — South Punjab's Premier Commercial Hub | Leadership",
+      title: "About Takmeel Square, South Punjab's Premier Commercial Hub | Leadership",
       description:
         "Learn about Takmeel Square, the 1.2 million sq ft commercial hub in DHA Bahawalpur, our vision, and the leadership team led by CEO Capt (R) Dr. Kamran Fazal.",
       path: "/about",

@@ -7,7 +7,7 @@ import { Location } from "@/components/sections/Location";
 import { Faq } from "@/components/sections/Faq";
 export const Route = createFileRoute("/contact")({ head: () =>
     seo({
-      title: "Contact Takmeel Square — Book a Site Visit | UAN +92 311 1555559",
+      title: "Contact Takmeel Square, Book a Site Visit | UAN +92 311 1555559",
       description:
         "Contact Takmeel Square for pricing, availability and site visits. UAN +92 311 1555559, info@takmeel.pk. Offices in DHA Bahawalpur, Lahore and Dubai.",
       path: "/contact",

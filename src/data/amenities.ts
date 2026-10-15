@@ -1,5 +1,5 @@
 // src/data/amenities.ts
-/** Amenities, reasons and project facts — from the official Takmeel Square presentation. */
+/** Amenities, reasons and project facts, from the official Takmeel Square presentation. */
 import { images } from "./projects";
 
 export interface Amenity {
@@ -14,25 +14,25 @@ export const amenities: Amenity[] = [
     id: "piazzas",
     title: "Active Piazzas",
     description: "Open plazas at the heart of Takmeel Square for shoppers, families and events.",
-    image: images.squareSunsetCourt,
+    image: images.renGlowEvening,
   },
   {
     id: "oasis",
     title: "Horticultural Oasis",
     description: "Landscaped roundabouts and planting that soften the architecture.",
-    image: images.squarePlazaCorner,
+    image: images.renGlowOasis,
   },
   {
     id: "walkways",
     title: "Dynamic Walkways",
     description: "Shaded, illuminated walkways connecting every block and market.",
-    image: images.squareBoulevard,
+    image: images.renGlowWalk,
   },
   {
     id: "glow-park",
     title: "Glow Park",
     description: "An illuminated park spanning 4 acres, with a food court and seating for 600.",
-    image: images.glowPark,
+    image: images.renGlowDay,
   },
   {
     id: "rooftop",
@@ -44,26 +44,26 @@ export const amenities: Amenity[] = [
     id: "parking",
     title: "Wide & Underground Parking",
     description: "1,100 parking spaces, including underground parking, plus a shuttle service.",
-    image: images.bazaarStreet,
+    image: images.squareParkParking,
   },
   {
     id: "anchor",
     title: "Al-Fatah",
     description: "An anchor retail destination within Takmeel Square.",
-    image: images.alFatah,
+    image: images.renAlfatah,
   },
   {
     id: "facilities",
     title: "Security & Facilities",
-    description: "CCTV surveillance, a gated entrance, prayer area, ablution and washrooms.",
-    image: images.bazaarShuttle,
+    description: "CCTV surveillance, a gated entrance and washrooms.",
+    image: images.bazaarGatehouse,
   },
 ];
 
 export const whyPoints = [
   {
     title: "Prime location",
-    body: "Inside DHA Bahawalpur — 3.6 KM from Bahawalpur Airport and 4.9 KM from Cantt, facing the Main Boulevard.",
+    body: "Inside DHA Bahawalpur, 3.6 KM from Bahawalpur Airport and 4.9 KM from Cantt, facing the Main Boulevard.",
   },
   {
     title: "Client trust",

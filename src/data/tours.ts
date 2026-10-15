@@ -66,6 +66,21 @@ import squareParkParking from "../assets/takmeel/hq/square-park-parking.jpg";
 import squareSunsetCourt from "../assets/takmeel/hq/square-sunset-court.jpg";
 import squareSunsetGlass from "../assets/takmeel/hq/square-sunset-glass.jpg";
 
+// High-quality AI & Glow Park renders
+import renSqAerial from "../assets/takmeel/ren/sq-aerial.jpg";
+import renSqDistrict from "../assets/takmeel/ren/sq-district.jpg";
+import renSqBoulevard from "../assets/takmeel/ren/sq-boulevard.jpg";
+import renGlowWalk from "../assets/takmeel/ren/glow-walk.jpg";
+import renGlowEvening from "../assets/takmeel/ren/glow-evening.jpg";
+import renGlowOasis from "../assets/takmeel/ren/glow-oasis.jpg";
+import renGlowEntrance from "../assets/takmeel/ren/glow-entrance.jpg";
+import renGlowParking from "../assets/takmeel/ren/glow-parking.jpg";
+import renGlowRestaurant from "../assets/takmeel/ren/glow-restaurant.jpg";
+import renGlowFoodcourt from "../assets/takmeel/ren/glow-foodcourt.jpg";
+import renGym from "../assets/takmeel/ren/gym.jpg";
+import renGym2 from "../assets/takmeel/ren/gym2.jpg";
+import renCoffee from "../assets/takmeel/ren/coffee.jpg";
+
 export interface TourScene {
   id: string;
   title: string;
@@ -77,7 +92,7 @@ export interface TourScene {
 export interface TourProperty {
   /** Matches the URL hash: /tour#tour-{id} */
   id: string;
-  category: "Square" | "Homes" | "Bazaar" | "Park" | "Restaurants";
+  category: "Square" | "Homes" | "Bazaar" | "Park" | "Restaurants" | "Gym" | "Café";
   name: string;
   location: string;
   scenes: TourScene[];
@@ -92,18 +107,45 @@ export const tours: TourProperty[] = [
     location: "DHA Bahawalpur",
     scenes: [
       {
-        id: "aerial",
-        title: "Takmeel Square from above",
-        image: squareAerialDay,
-        links: [{ to: "boulevard", x: 70, y: 70, label: "Arrive on the Main Boulevard" }],
+        id: "r-aerial",
+        title: "Takmeel Square, aerial view",
+        image: renSqAerial,
+        links: [{ to: "boulevard", x: 62, y: 66, label: "Arrive on the Main Boulevard" }],
       },
       {
         id: "boulevard",
         title: "Main Boulevard frontage",
         image: squareBoulevardDay,
         links: [
-          { to: "plaza", x: 60, y: 62, label: "Walk to the plaza" },
-          { to: "aerial", x: 12, y: 85, label: "Back to aerial view" },
+          { to: "r-district", x: 64, y: 62, label: "Into the commercial district" },
+          { to: "r-aerial", x: 12, y: 85, label: "Back to aerial view" },
+        ],
+      },
+      {
+        id: "r-district",
+        title: "Commercial district",
+        image: renSqDistrict,
+        links: [
+          { to: "r-boulevard", x: 64, y: 62, label: "Boulevard at dusk" },
+          { to: "boulevard", x: 12, y: 85, label: "Back to the boulevard" },
+        ],
+      },
+      {
+        id: "r-boulevard",
+        title: "Main Boulevard at dusk",
+        image: renSqBoulevard,
+        links: [
+          { to: "canopy-street", x: 62, y: 62, label: "Walk the canopy street" },
+          { to: "r-district", x: 12, y: 85, label: "Back to the district" },
+        ],
+      },
+      {
+        id: "canopy-street",
+        title: "Canopy street",
+        image: squareCanopyStreet,
+        links: [
+          { to: "plaza", x: 62, y: 60, label: "Signature plaza" },
+          { to: "r-boulevard", x: 12, y: 85, label: "Back to the boulevard" },
         ],
       },
       {
@@ -111,24 +153,17 @@ export const tours: TourProperty[] = [
         title: "Signature plaza",
         image: squarePlazaLogo,
         links: [
-          { to: "plaza-corner", x: 75, y: 70, label: "Plaza corner" },
-          { to: "canopy-street", x: 20, y: 70, label: "Canopy street" },
-          { to: "boulevard", x: 50, y: 88, label: "Back to boulevard" },
+          { to: "plaza-corner", x: 68, y: 62, label: "Plaza corner" },
+          { to: "canopy-street", x: 12, y: 85, label: "Back to canopy street" },
         ],
       },
       {
         id: "plaza-corner",
         title: "Plaza corner",
         image: squarePlazaCorner,
-        links: [{ to: "plaza", x: 20, y: 80, label: "Back to plaza" }],
-      },
-      {
-        id: "canopy-street",
-        title: "Canopy street",
-        image: squareCanopyStreet,
         links: [
-          { to: "walkways", x: 70, y: 62, label: "Illuminated walkways" },
-          { to: "plaza", x: 15, y: 85, label: "Back to plaza" },
+          { to: "walkways", x: 66, y: 60, label: "Illuminated walkways" },
+          { to: "plaza", x: 12, y: 85, label: "Back to the plaza" },
         ],
       },
       {
@@ -136,8 +171,8 @@ export const tours: TourProperty[] = [
         title: "Illuminated walkways",
         image: squareCanopyWalk,
         links: [
-          { to: "court", x: 60, y: 62, label: "Central court" },
-          { to: "canopy-street", x: 15, y: 85, label: "Back to canopy street" },
+          { to: "court", x: 62, y: 60, label: "Central court" },
+          { to: "plaza-corner", x: 12, y: 85, label: "Back to plaza corner" },
         ],
       },
       {
@@ -145,8 +180,8 @@ export const tours: TourProperty[] = [
         title: "Central court at sunset",
         image: squareSunsetCourt,
         links: [
-          { to: "tower", x: 70, y: 55, label: "Signature tower" },
-          { to: "walkways", x: 15, y: 85, label: "Back to walkways" },
+          { to: "tower", x: 66, y: 55, label: "Signature tower" },
+          { to: "walkways", x: 12, y: 85, label: "Back to the walkways" },
         ],
       },
       {
@@ -154,24 +189,24 @@ export const tours: TourProperty[] = [
         title: "Signature tower at sunset",
         image: squareSunsetGlass,
         links: [
-          { to: "night", x: 50, y: 30, label: "See Takmeel Square by night" },
-          { to: "court", x: 15, y: 85, label: "Back to central court" },
+          { to: "night", x: 50, y: 32, label: "Takmeel Square by night" },
+          { to: "court", x: 12, y: 85, label: "Back to the court" },
         ],
       },
       {
         id: "night",
         title: "Takmeel Square by night",
         image: squareAerialNight,
-        links: [{ to: "aerial", x: 50, y: 75, label: "Back to day view" }],
+        links: [{ to: "r-aerial", x: 50, y: 75, label: "Back to the start" }],
       },
-    ],
+    ]
   },
 
   /* --------------------------- TAKMEEL HOMES -------------------------- */
   {
     id: "house",
     category: "Homes",
-    name: "Takmeel Homes — Villa, bedrooms & bathrooms",
+    name: "Takmeel Homes, Villa, bedrooms & bathrooms",
     location: "DHA Bahawalpur",
     scenes: [
       {
@@ -241,7 +276,7 @@ export const tours: TourProperty[] = [
       },
       {
         id: "lounge-2",
-        title: "Lounge — TV wall",
+        title: "Lounge, TV wall",
         image: hGfLounge2,
         links: [
           { to: "lounge-3", x: 70, y: 62, label: "Seating corner" },
@@ -250,7 +285,7 @@ export const tours: TourProperty[] = [
       },
       {
         id: "lounge-3",
-        title: "Lounge — seating corner",
+        title: "Lounge, seating corner",
         image: hGfLounge3,
         links: [
           { to: "lounge", x: 15, y: 85, label: "Back to lounge" },
@@ -268,7 +303,7 @@ export const tours: TourProperty[] = [
       },
       {
         id: "drawing-2",
-        title: "Drawing room — sitting area",
+        title: "Drawing room, sitting area",
         image: hDrawing2,
         links: [
           { to: "drawing", x: 15, y: 85, label: "Back" },
@@ -276,7 +311,7 @@ export const tours: TourProperty[] = [
       },
       {
         id: "drawing-top",
-        title: "Drawing room — top view",
+        title: "Drawing room, top view",
         image: hDrawingTop,
         links: [
           { to: "drawing", x: 15, y: 85, label: "Back" },
@@ -294,7 +329,7 @@ export const tours: TourProperty[] = [
       },
       {
         id: "dining-2",
-        title: "Dining — other side",
+        title: "Dining, other side",
         image: hDining2,
         links: [
           { to: "dining", x: 15, y: 85, label: "Back" },
@@ -338,7 +373,7 @@ export const tours: TourProperty[] = [
       },
       {
         id: "ff-lounge-2",
-        title: "First floor lounge — TV wall",
+        title: "First floor lounge, TV wall",
         image: hFfLounge2,
         links: [
           { to: "ff-lounge-3", x: 70, y: 60, label: "Seating" },
@@ -348,7 +383,7 @@ export const tours: TourProperty[] = [
       },
       {
         id: "ff-lounge-3",
-        title: "First floor lounge — seating",
+        title: "First floor lounge, seating",
         image: hFfLounge3,
         links: [
           { to: "ff-lounge", x: 15, y: 85, label: "Back" },
@@ -366,7 +401,7 @@ export const tours: TourProperty[] = [
       },
       {
         id: "bed1-2",
-        title: "Bedroom 1 — sitting corner",
+        title: "Bedroom 1, sitting corner",
         image: hBed12,
         links: [
           { to: "bed1-3", x: 70, y: 60, label: "TV & shelving" },
@@ -375,7 +410,7 @@ export const tours: TourProperty[] = [
       },
       {
         id: "bed1-3",
-        title: "Bedroom 1 — TV & shelving",
+        title: "Bedroom 1, TV & shelving",
         image: hBed13,
         links: [
           { to: "bed1", x: 15, y: 85, label: "Back to bed" },
@@ -392,7 +427,7 @@ export const tours: TourProperty[] = [
       },
       {
         id: "bath1-2",
-        title: "Bathroom 1 — shower",
+        title: "Bathroom 1, shower",
         image: hBath12,
         links: [
           { to: "bath1", x: 15, y: 85, label: "Back" },
@@ -410,7 +445,7 @@ export const tours: TourProperty[] = [
       },
       {
         id: "bed2-2",
-        title: "Bedroom 2 — bed view",
+        title: "Bedroom 2, bed view",
         image: hBed22,
         links: [
           { to: "bed2-3", x: 70, y: 60, label: "TV wall" },
@@ -419,7 +454,7 @@ export const tours: TourProperty[] = [
       },
       {
         id: "bed2-3",
-        title: "Bedroom 2 — TV wall",
+        title: "Bedroom 2, TV wall",
         image: hBed23,
         links: [
           { to: "bed2-4", x: 70, y: 60, label: "Window side" },
@@ -428,7 +463,7 @@ export const tours: TourProperty[] = [
       },
       {
         id: "bed2-4",
-        title: "Bedroom 2 — window side",
+        title: "Bedroom 2, window side",
         image: hBed24,
         links: [
           { to: "bed2", x: 15, y: 85, label: "Back to bed" },
@@ -446,7 +481,7 @@ export const tours: TourProperty[] = [
       },
       {
         id: "bath2-2",
-        title: "Bathroom 2 — vanity",
+        title: "Bathroom 2, vanity",
         image: hBath22,
         links: [
           { to: "bath2", x: 15, y: 85, label: "Back" },
@@ -463,7 +498,7 @@ export const tours: TourProperty[] = [
       },
       {
         id: "bath3-2",
-        title: "Bathroom 3 — vanity & shower",
+        title: "Bathroom 3, vanity & shower",
         image: hBath32,
         links: [
           { to: "bath3", x: 15, y: 85, label: "Back" },
@@ -476,7 +511,7 @@ export const tours: TourProperty[] = [
   {
     id: "bazaar",
     category: "Bazaar",
-    name: "Takmeel Bazaar — 260 shops, 7 floors",
+    name: "Takmeel Bazaar, 260 shops, 7 floors",
     location: "Takmeel Square, DHA Bahawalpur",
     scenes: [
       {
@@ -501,7 +536,7 @@ export const tours: TourProperty[] = [
       },
       {
         id: "rangeela",
-        title: "New Rangeela Bazaar — Cloth market",
+        title: "New Rangeela Bazaar, Cloth market",
         image: rangeelaCorridorHq,
         links: [
           { to: "sarafa", x: 50, y: 55, label: "Walk to Sarafa Bazaar" },
@@ -510,7 +545,7 @@ export const tours: TourProperty[] = [
       },
       {
         id: "sarafa",
-        title: "New Sarafa Bazaar — Jewellery market",
+        title: "New Sarafa Bazaar, Jewellery market",
         image: sarafaBazaar,
         links: [
           { to: "tech", x: 50, y: 55, label: "Walk to Tech Bazaar" },
@@ -519,7 +554,7 @@ export const tours: TourProperty[] = [
       },
       {
         id: "tech",
-        title: "New Tech Bazaar — Mobile market",
+        title: "New Tech Bazaar, Mobile market",
         image: techBazaar,
         links: [
           { to: "atrium-2", x: 50, y: 55, label: "Back to escalators" },
@@ -605,9 +640,51 @@ export const tours: TourProperty[] = [
   {
     id: "park",
     category: "Park",
-    name: "Glow Park — 4 acres",
+    name: "Glow Park, 4 acres",
     location: "Takmeel Square, DHA Bahawalpur",
     scenes: [
+      {
+        id: "p-entrance",
+        title: "Glow Park entrance",
+        image: renGlowEntrance,
+        links: [{ to: "p-walk", x: 60, y: 64, label: "Walk into the park" }],
+      },
+      {
+        id: "p-walk",
+        title: "Illuminated walkways",
+        image: renGlowWalk,
+        links: [
+          { to: "p-oasis", x: 65, y: 60, label: "Horticultural oasis" },
+          { to: "p-entrance", x: 12, y: 85, label: "Back to the entrance" },
+        ],
+      },
+      {
+        id: "p-oasis",
+        title: "Horticultural oasis",
+        image: renGlowOasis,
+        links: [
+          { to: "p-evening", x: 65, y: 60, label: "The park by evening" },
+          { to: "p-walk", x: 12, y: 85, label: "Back to the walkways" },
+        ],
+      },
+      {
+        id: "p-evening",
+        title: "Glow Park in the evening",
+        image: renGlowEvening,
+        links: [
+          { to: "p-parking", x: 65, y: 62, label: "Parking & approach" },
+          { to: "p-oasis", x: 12, y: 85, label: "Back to the oasis" },
+        ],
+      },
+      {
+        id: "p-parking",
+        title: "Parking & approach",
+        image: renGlowParking,
+        links: [
+          { to: "glow", x: 62, y: 62, label: "See Glow Park by night" },
+          { to: "p-evening", x: 12, y: 85, label: "Back" },
+        ],
+      },
       {
         id: "glow",
         title: "Glow Park by night",
@@ -639,9 +716,27 @@ export const tours: TourProperty[] = [
   {
     id: "restaurants",
     category: "Restaurants",
-    name: "Rooftop Restaurants & Food Court",
+    name: "Rooftop & Glow Park Restaurants",
     location: "Takmeel Square, DHA Bahawalpur",
     scenes: [
+      {
+        id: "glow-restaurant",
+        title: "Glow Park restaurant",
+        image: renGlowRestaurant,
+        links: [
+          { to: "glow-foodcourt", x: 65, y: 62, label: "Glow Park food court" },
+          { to: "rooftop", x: 20, y: 60, label: "Rooftop restaurants" },
+        ],
+      },
+      {
+        id: "glow-foodcourt",
+        title: "Glow Park food court",
+        image: renGlowFoodcourt,
+        links: [
+          { to: "glow-restaurant", x: 15, y: 85, label: "Back to the restaurant" },
+          { to: "street", x: 70, y: 62, label: "Restaurant street" },
+        ],
+      },
       {
         id: "street",
         title: "Restaurant street",
@@ -674,6 +769,44 @@ export const tours: TourProperty[] = [
         title: "Glow Park food court",
         image: foodCourt,
         links: [{ to: "street", x: 80, y: 80, label: "Back to restaurant street" }],
+      },
+    ],
+  },
+
+  /* -------------------------------- GYM -------------------------------- */
+  {
+    id: "gym",
+    category: "Gym",
+    name: "Fitness & Gym",
+    location: "Takmeel Square, DHA Bahawalpur",
+    scenes: [
+      {
+        id: "gym",
+        title: "State-of-the-art gym",
+        image: renGym,
+        links: [{ to: "gym-2", x: 65, y: 62, label: "Strength & training floor" }],
+      },
+      {
+        id: "gym-2",
+        title: "Strength & training floor",
+        image: renGym2,
+        links: [{ to: "gym", x: 15, y: 85, label: "Back to the gym" }],
+      },
+    ],
+  },
+
+  /* -------------------------------- CAFÉ ------------------------------- */
+  {
+    id: "cafe",
+    category: "Café",
+    name: "Coffee Shop & Café",
+    location: "Takmeel Square, DHA Bahawalpur",
+    scenes: [
+      {
+        id: "coffee",
+        title: "Coffee shop",
+        image: renCoffee,
+        links: [],
       },
     ],
   },

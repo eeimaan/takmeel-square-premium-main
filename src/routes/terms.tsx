@@ -8,7 +8,7 @@ import { legalDocs } from "@/data/legal";
 export const Route = createFileRoute("/terms")({
   head: () =>
     seo({
-      title: "Terms & Conditions — Takmeel Square",
+      title: "Terms & Conditions, Takmeel Square",
       description: "Terms and conditions for using the Takmeel Square website, including information, bookings and intellectual property.",
       path: "/terms",
     }),

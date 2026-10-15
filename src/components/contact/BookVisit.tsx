@@ -78,7 +78,7 @@ export function BookVisit() {
     const label = kind === "visit" ? "Site visit" : "Phone call";
     const summary = `${label} · ${fmtDate(date)} · ${slot}`;
     const lines = [
-      `Booking request — ${label}`,
+      `Booking request, ${label}`,
       `Date: ${fmtDate(date)}`,
       `Time: ${slot}`,
       `Name: ${f.get("name")}`,
@@ -100,14 +100,14 @@ export function BookVisit() {
 
   return (
     <>
-      <section className="surface-dark pb-20 pt-40 md:pt-48">
+      <section className="surface-dark pb-20 pt-20 md:pt-48">
         <Shell>
           <span className="eyebrow text-gold">Book a visit · Schedule a call</span>
           <h1 className="display mt-6 max-w-4xl text-[clamp(2.6rem,7vw,6rem)]">
             Choose a day. <em className="text-gold">We'll take it from there.</em>
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-ivory/65">
-            Pick a site visit at Takmeel Square, DHA Bahawalpur, or a phone call with our sales team — select a date and
+            Pick a site visit at Takmeel Square, DHA Bahawalpur, or a phone call with our sales team, select a date and
             time that suits you and we'll confirm.
           </p>
         </Shell>
@@ -122,8 +122,8 @@ export function BookVisit() {
               </span>
               <h2 className="display mt-8 text-4xl md:text-5xl">Request received.</h2>
               <p className="mt-4 text-sm uppercase tracking-[0.18em] text-gold-deep">{done.summary}</p>
-              <p className="mt-6 max-w-md text-sm leading-relaxed text-muted-foreground">
-                Your booking details have opened in WhatsApp — press send to share them with our team. We'll confirm your
+              <p className="mt-6 max-w-md text-base leading-relaxed text-muted-foreground">
+                Your booking details have opened in WhatsApp, press send to share them with our team. We'll confirm your
                 appointment shortly. You can also reach us on UAN {site.phone}.
               </p>
               <div className="mt-10 flex flex-wrap gap-3">
@@ -136,7 +136,7 @@ export function BookVisit() {
                   <MessageCircle size={16} /> Send on WhatsApp
                 </a>
                 <a
-                  href={`mailto:${site.email}?subject=${encodeURIComponent("Booking request — Takmeel Square")}&body=${encodeURIComponent(done.text)}`}
+                  href={`mailto:${site.email}?subject=${encodeURIComponent("Booking request, Takmeel Square")}&body=${encodeURIComponent(done.text)}`}
                   className="brand-hover inline-flex items-center gap-3 rounded-full border border-forest px-7 py-4 text-[0.68rem] uppercase tracking-[0.24em] text-forest"
                 >
                   Send by email

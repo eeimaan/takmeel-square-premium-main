@@ -1,5 +1,5 @@
 // src/data/projects.ts
-/** Takmeel Square projects — content from the official Takmeel Square presentation. */
+/** Takmeel Square projects, content from the official Takmeel Square presentation. */
 
 import bazaarA from "../assets/main-building.png";
 import bazaarB from "../assets/bazaarB.png";
@@ -61,7 +61,60 @@ import homeDining from "../assets/takmeel/home/dining.jpg";
 import homeKitchen from "../assets/takmeel/home/kitchen.jpg";
 import bazaarTechExterior from "../assets/takmeel/hq/bazaar-tech-exterior.jpg";
 
+// High-quality AI renders & Glow Park renders (src/assets/takmeel/ren)
+import renSqAerial from "../assets/takmeel/ren/sq-aerial.jpg";
+import renSqDistrict from "../assets/takmeel/ren/sq-district.jpg";
+import renSqBoulevard from "../assets/takmeel/ren/sq-boulevard.jpg";
+import renBzBoulevard from "../assets/takmeel/ren/bz-boulevard.jpg";
+import renBzGallery from "../assets/takmeel/ren/bz-gallery.jpg";
+import renBzEscalator from "../assets/takmeel/ren/bz-escalator.jpg";
+import renBzTextile from "../assets/takmeel/ren/bz-textile.jpg";
+import renRangeela from "../assets/takmeel/ren/rangeela.jpg";
+import renRangeela2 from "../assets/takmeel/ren/rangeela2.jpg";
+import renSarafa from "../assets/takmeel/ren/sarafa.jpg";
+import renTech from "../assets/takmeel/ren/tech.jpg";
+import renTech2 from "../assets/takmeel/ren/tech2.jpg";
+import renHomeKanal from "../assets/takmeel/ren/home-kanal.jpg";
+import renAlfatah from "../assets/takmeel/ren/alfatah.jpg";
+import renAlfatah2 from "../assets/takmeel/ren/alfatah2.jpg";
+import renCoffee from "../assets/takmeel/ren/coffee.jpg";
+import renGym from "../assets/takmeel/ren/gym.jpg";
+import renGlowWalk from "../assets/takmeel/ren/glow-walk.jpg";
+import renGlowEvening from "../assets/takmeel/ren/glow-evening.jpg";
+import renGlowOasis from "../assets/takmeel/ren/glow-oasis.jpg";
+import renGlowRestaurant from "../assets/takmeel/ren/glow-restaurant.jpg";
+import renGlowEntrance from "../assets/takmeel/ren/glow-entrance.jpg";
+import renGlowParking from "../assets/takmeel/ren/glow-parking.jpg";
+import renGlowFoodcourt from "../assets/takmeel/ren/glow-foodcourt.jpg";
+import renGlowDay from "../assets/takmeel/ren/glow-day.jpg";
+
 export const images = {
+  // New high-quality renders
+  renGlowDay,
+  renSqAerial,
+  renSqDistrict,
+  renSqBoulevard,
+  renBzBoulevard,
+  renBzGallery,
+  renBzEscalator,
+  renBzTextile,
+  renRangeela,
+  renRangeela2,
+  renSarafa,
+  renTech,
+  renTech2,
+  renHomeKanal,
+  renAlfatah,
+  renAlfatah2,
+  renCoffee,
+  renGym,
+  renGlowWalk,
+  renGlowEvening,
+  renGlowOasis,
+  renGlowRestaurant,
+  renGlowEntrance,
+  renGlowParking,
+  renGlowFoodcourt,
   // High-quality renders
   squareAerialDay,
   squareAerialNight,
@@ -149,8 +202,8 @@ export const projects: Project[] = [
     type: "Commercial Hub",
     status: "Flagship",
     description:
-      "South Punjab's premier commercial hub — 1.2 million square feet built on an inclusive, integrated retail and open-market model, with A Block facing the Main Boulevard and B Block facing Glow Park.",
-    image: images.squareAerialDay,
+      "South Punjab's premier commercial hub, 1.2 million square feet built on an inclusive, integrated retail and open-market model, with A Block facing the Main Boulevard and B Block facing Glow Park.",
+    image: images.renSqAerial,
     stats: [
       { label: "Covered area", value: "1.2M sq ft" },
       { label: "4 Marla units", value: "68" },
@@ -164,8 +217,8 @@ export const projects: Project[] = [
     type: "Retail & Open Markets",
     status: "Retail",
     description:
-      "A well-planned 7-floor high-rise of 260 shops bringing together three major historical markets of Bahawalpur — New Rangeela Bazaar, New Sarafa Bazaar and New Tech Bazaar — topped with rooftop restaurants.",
-    image: images.bazaarFacadeHq,
+      "A well-planned 7-floor high-rise of 260 shops bringing together three major historical markets of Bahawalpur, New Rangeela Bazaar, New Sarafa Bazaar and New Tech Bazaar, topped with rooftop restaurants.",
+    image: images.renBzBoulevard,
     stats: [
       { label: "Shops", value: "260" },
       { label: "Floors", value: "7" },
@@ -179,8 +232,8 @@ export const projects: Project[] = [
     type: "Luxury Villas",
     status: "Residential",
     description:
-      "Fully completed luxury homes designed for comfort and modern living — 1 Kanal villas in Sector A and 8 & 10 Marla homes in Sector C of DHA Bahawalpur.",
-    image: images.houseView02,
+      "Fully completed luxury homes designed for comfort and modern living, 1 Kanal villas in Sector A and 8 & 10 Marla homes in Sector C of DHA Bahawalpur.",
+    image: images.renHomeKanal,
     stats: [
       { label: "Sector A", value: "1 Kanal" },
       { label: "Sector C", value: "8 & 10 Marla" },
@@ -194,8 +247,8 @@ export const projects: Project[] = [
     type: "Illuminated Park & Food Court",
     status: "Leisure",
     description:
-      "An illuminated park spanning 4 acres beside Takmeel Square — a place to relax and gather, with a food court, seating and landscaped walkways.",
-    image: images.squareParkParking,
+      "An illuminated park spanning 4 acres beside Takmeel Square, a place to relax and gather, with a food court, seating and landscaped walkways.",
+    image: images.renGlowWalk,
     stats: [
       { label: "Area", value: "4 Acres" },
       { label: "Seating", value: "600" },
@@ -203,6 +256,42 @@ export const projects: Project[] = [
     ],
   },
 ];
+
+/** Gallery images per project, used on the individual project detail pages (/project/$id). */
+export const projectGalleries: Record<string, string[]> = {
+  "takmeel-square": [
+    images.renSqAerial,
+    images.renSqDistrict,
+    images.renSqBoulevard,
+    images.squareCanopyStreet,
+    images.squareSunsetCourt,
+    images.squareCafeCanopy,
+  ],
+  "takmeel-bazaar": [
+    images.renBzBoulevard,
+    images.renBzGallery,
+    images.renBzEscalator,
+    images.renRangeela,
+    images.renSarafa,
+    images.renTech,
+  ],
+  "takmeel-homes": [
+    images.houseView02,
+    images.lounge,
+    images.homeDining,
+    images.homeKitchen,
+    images.bedroomA,
+    images.houseLawn,
+  ],
+  "glow-park": [
+    images.renGlowWalk,
+    images.renGlowEvening,
+    images.renGlowOasis,
+    images.renGlowRestaurant,
+    images.renGlowEntrance,
+    images.renGlowFoodcourt,
+  ],
+};
 
 export interface PropertyType {
   id: string;
@@ -245,12 +334,12 @@ export const propertyTypes: PropertyType[] = [
   {
     id: "villas",
     title: "Luxury Villas",
-    blurb: "Takmeel Homes — 1 Kanal in Sector A, 8 & 10 Marla in Sector C.",
+    blurb: "Takmeel Homes, 1 Kanal in Sector A, 8 & 10 Marla in Sector C.",
     image: images.villaStreet,
   },
 ];
 
-/** Order matches `projects` — the showcase uses one image per project. */
+/** Order matches `projects`, the showcase uses one image per project. */
 export const galleryImages = [
   images.squareSunsetCourt,
   images.bazaarFacadeHq,
@@ -260,7 +349,7 @@ export const galleryImages = [
   images.squareBoulevardDay,
 ];
 
-/** Lifestyle wall — 15 frames. Images here are not used in the other home-page sections. */
+/** Lifestyle wall, 15 frames. Images here are not used in the other home-page sections. */
 export const lifestyleReel = [
   { image: images.squareMasterRender, title: "Takmeel Square by night", place: "DHA Bahawalpur" },
   { image: images.lounge, title: "Living room", place: "Takmeel Homes" },

@@ -198,10 +198,10 @@ export function VirtualTour({ headingAs: Heading = "h2" }: { headingAs?: "h1" | 
   );
 
   return (
-    <Section id="tour" className="bg-secondary py-28 md:py-36">
+    <Section id="tour" className="bg-secondary py-16 md:py-24">
       <style>{`@keyframes tour-out{0%{opacity:1;transform:scale(1);filter:blur(0)}100%{opacity:0;transform:scale(1.35);filter:blur(6px)}}`}</style>
       <Shell>
-        <Eyebrow index="—">Virtual tour</Eyebrow>
+        <Eyebrow index=", ">Virtual tour</Eyebrow>
         <div className="mt-10 grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
           <Heading className="display text-[clamp(2.4rem,5vw,4.5rem)]" data-reveal>
             Walk through before <em className="text-gold-deep">it's built.</em>

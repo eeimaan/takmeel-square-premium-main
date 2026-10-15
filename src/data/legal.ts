@@ -25,7 +25,7 @@ export const legalDocs: Record<LegalDoc["slug"], LegalDoc> = {
       {
         heading: "Information we collect",
         body: [
-          "When you submit an enquiry, book a site visit, schedule a call, use the chat form or subscribe to our newsletter, we collect the details you provide — such as your name, phone or WhatsApp number, email address, area of interest, preferred date and time, and any message you choose to include.",
+          "When you submit an enquiry, book a site visit, schedule a call, use the chat form or subscribe to our newsletter, we collect the details you provide, such as your name, phone or WhatsApp number, email address, area of interest, preferred date and time, and any message you choose to include.",
           "We do not knowingly collect information from children, and we do not ask for sensitive personal information through this website.",
         ],
       },
@@ -33,7 +33,7 @@ export const legalDocs: Record<LegalDoc["slug"], LegalDoc> = {
         heading: "How we use your information",
         body: [
           "We use your information only to respond to your enquiry, arrange and confirm site visits or calls, share project information you have requested, and keep you informed about Takmeel Square if you have asked us to.",
-          "We do not sell, rent or trade your personal information to third parties.",
+          "**We do not sell, rent or trade your personal information to third parties.**",
         ],
       },
       {
@@ -86,7 +86,7 @@ export const legalDocs: Record<LegalDoc["slug"], LegalDoc> = {
       {
         heading: "Information, not an offer",
         body: [
-          "Content on this website — including descriptions, specifications, sizes, layouts, amenities, images and virtual tours — is for information only and does not constitute an offer, contract or binding commitment.",
+          "Content on this website, including descriptions, specifications, sizes, layouts, amenities, images and virtual tours, is for information purposes only and does not constitute an offer, contract or binding commitment.",
           "Prices, payment plans, availability and specifications are subject to change without notice. All sales and bookings are governed solely by the formal documents issued and signed by Takmeel Square.",
         ],
       },
@@ -99,7 +99,7 @@ export const legalDocs: Record<LegalDoc["slug"], LegalDoc> = {
       {
         heading: "Intellectual property",
         body: [
-          "All content on this website, including the Takmeel Square name and logo, text, renders, photographs, plans and virtual tours, is owned by or licensed to Takmeel Square. It may not be copied, reproduced or used commercially without our written permission.",
+          "All content on this website, including the Takmeel Square name and logo, text, renders, photographs, plans and virtual tours, is owned by or licensed to Takmeel Square. All images, renders and photographs are copyrighted and may not be downloaded, copied, reproduced, distributed or used commercially without our prior written permission.",
         ],
       },
       {

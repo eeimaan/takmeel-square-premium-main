@@ -20,7 +20,7 @@ export function Hero() {
     return () => window.clearTimeout(t);
   }, []);
 
-  // Scroll: layered depth — image, logo, title and meta each move at their own speed.
+  // Scroll: layered depth, image, logo, title and meta each move at their own speed.
   useEffect(() => {
     if (prefersReducedMotion()) return;
     let cancelled = false;
@@ -102,8 +102,8 @@ export function Hero() {
             }`}
             style={{ transitionDelay: "1100ms" }}
           >
-            <p className="max-w-md text-sm leading-relaxed text-ivory/65">
-              The largest commercial hub of South Punjab — 1.2 million sq ft of
+            <p className="max-w-md text-base leading-relaxed text-ivory/65">
+              The largest commercial hub of South Punjab, 1.2 million sq ft of
               retail, business and leisure at the heart of DHA Bahawalpur.
             </p>
             <button

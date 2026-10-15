@@ -11,6 +11,7 @@ const interests = [
   "Takmeel Homes",
   "Rooftop Restaurant / Food Court",
   "Investment",
+  "Overseas (International Buyer)",
 ];
 
 const fieldClass =
@@ -19,14 +20,14 @@ const fieldClass =
 export function Contact({ headingAs: Heading = "h2" }: { headingAs?: "h1" | "h2" } = {}) {
   const [sent, setSent] = useState(false);
 
-  // Frontend only — nothing is submitted anywhere.
+  // Frontend only, nothing is submitted anywhere.
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSent(true);
   };
 
   return (
-    <Section id="contact" className="py-28 md:py-40">
+    <Section id="contact" className="py-16 md:py-24">
       <Shell>
         <div className="grid gap-16 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-24">
           <div>
@@ -49,14 +50,14 @@ export function Contact({ headingAs: Heading = "h2" }: { headingAs?: "h1" | "h2"
             </dl>
           </div>
 
-          <div className="relative">
+          <div className="relative lg:mt-24">
             {sent ? (
               <div className="flex min-h-[26rem] flex-col items-start justify-center border border-gold/40 bg-secondary/50 p-10">
                 <span className="flex h-14 w-14 items-center justify-center rounded-full border border-gold text-gold">
                   <Check className="h-6 w-6" strokeWidth={1.25} />
                 </span>
                 <h3 className="display mt-8 text-4xl">Thank you.</h3>
-                <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
+                <p className="mt-4 max-w-sm text-base leading-relaxed text-muted-foreground">
                   Your enquiry has been received. A member of the Takmeel Square team
                   will be in touch shortly.
                 </p>

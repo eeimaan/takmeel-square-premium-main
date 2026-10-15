@@ -1,7 +1,7 @@
 // src/lib/seo.ts
 /**
  * Central SEO / GEO configuration.
- * Change SITE_URL once the site is live on its final domain — every canonical URL,
+ * Change SITE_URL once the site is live on its final domain, every canonical URL,
  * Open Graph URL and structured-data URL is built from it.
  */
 import { faqs } from "@/data/faqs";
@@ -30,7 +30,7 @@ const ADDRESS = {
   addressCountry: "PK",
 };
 
-/** Organization + local business — rendered on every page. */
+/** Organization + local business, rendered on every page. */
 export const organizationSchema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -66,7 +66,7 @@ export const organizationSchema = {
       department: [
         {
           "@type": "LocalBusiness",
-          name: "Takmeel Square — Lahore Office",
+          name: "Takmeel Square, Lahore Office",
           telephone: PHONE,
           address: {
             "@type": "PostalAddress",
@@ -78,7 +78,7 @@ export const organizationSchema = {
         },
         {
           "@type": "LocalBusiness",
-          name: "Takmeel Square — Dubai Office",
+          name: "Takmeel Square, Dubai Office",
           telephone: PHONE,
           address: {
             "@type": "PostalAddress",
@@ -100,7 +100,7 @@ export const organizationSchema = {
   ],
 };
 
-/** FAQ structured data — mirrors the visible FAQ section. */
+/** FAQ structured data, mirrors the visible FAQ section. */
 export const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -134,7 +134,7 @@ export const projectsSchema = {
   })),
 };
 
-/** Area guide — Takmeel Square as a place inside DHA Bahawalpur, with nearby landmarks. */
+/** Area guide, Takmeel Square as a place inside DHA Bahawalpur, with nearby landmarks. */
 export const areaSchema = {
   "@context": "https://schema.org",
   "@type": "Place",

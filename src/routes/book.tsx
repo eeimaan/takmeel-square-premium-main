@@ -7,7 +7,7 @@ import { BookVisit } from "@/components/contact/BookVisit";
 export const Route = createFileRoute("/book")({
   head: () =>
     seo({
-      title: "Book a Site Visit or Schedule a Call — Takmeel Square, DHA Bahawalpur",
+      title: "Book a Site Visit or Schedule a Call, Takmeel Square, DHA Bahawalpur",
       description:
         "Book a site visit to Takmeel Square in DHA Bahawalpur or schedule a call with our sales team. Choose a date and time that suits you.",
       path: "/book",

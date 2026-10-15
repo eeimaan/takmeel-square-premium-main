@@ -8,7 +8,6 @@ import { Hero } from "@/components/hero/Hero";
 import { About } from "@/components/sections/About";
 import { Vision } from "@/components/sections/Vision";
 import { FeaturedProjects } from "@/components/projects/FeaturedProjects";
-import { PropertyTypes } from "@/components/sections/PropertyTypes";
 import { Amenities } from "@/components/amenities/Amenities";
 import { Location } from "@/components/sections/Location";
 import { Architecture } from "@/components/sections/Architecture";
@@ -18,6 +17,7 @@ import { ProjectDetails } from "@/components/sections/ProjectDetails";
 import { CallToAction } from "@/components/sections/CallToAction";
 import { Contact } from "@/components/contact/Contact";
 import { Faq } from "@/components/sections/Faq";
+import { Testimonials } from "@/components/sections/Testimonials";
 import { VirtualTour } from "@/components/tour/VirtualTour";
 import { useEffect } from "react";
 import { scrollToSection } from "@/lib/animations/useSmoothScroll";
@@ -35,7 +35,7 @@ import { useState, type MouseEvent } from "react";
 export const Route = createFileRoute("/")({
   head: () =>
     seo({
-      title: "Takmeel Square — Largest Commercial Hub in DHA Bahawalpur, South Punjab",
+      title: "Takmeel Square, Largest Commercial Hub in DHA Bahawalpur, South Punjab",
       description:
         "Takmeel Square, DHA Bahawalpur: 1.2 million sq ft commercial hub with 4 & 6 Marla commercial units, Takmeel Bazaar (260 shops), Takmeel Homes villas, 4-acre Glow Park and 1,100 parking spaces.",
       path: "/",
@@ -74,10 +74,9 @@ function Index() {
         <Hero />
         <About />
         <TrustedBy />
-        <FeaturedProjects />
+        <FeaturedProjects omitId="takmeel-square" />
         <VirtualTour />
         <Amenities />
-        <PropertyTypes />
         <Vision />
         <WhyUs />
         {/* <Architecture /> */}
@@ -86,6 +85,7 @@ function Index() {
         <Leadership />
         <Stats />
         {/* <CallToAction /> */}
+        <Testimonials preview />
         <Faq />
         <Location />
         <Contact />

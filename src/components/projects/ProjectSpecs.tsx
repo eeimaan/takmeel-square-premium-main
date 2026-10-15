@@ -4,7 +4,7 @@ import { Section, Shell, Eyebrow } from "@/components/sections/Section";
 import { projectSpecs } from "@/data/specs";
 
 /**
- * Specifications — one compact panel per project, switched with tabs.
+ * Specifications, one compact panel per project, switched with tabs.
  * Same visual language as "Project details": hairline rows, small labels, display values.
  * Every panel is server-rendered (inactive ones are `hidden`) so search engines read all of them.
  */
@@ -12,7 +12,7 @@ export function ProjectSpecs() {
   const [active, setActive] = useState(projectSpecs[0]!.id);
 
   return (
-    <Section id="specifications" dark className="py-28 md:py-36">
+    <Section id="specifications" dark className="py-16 md:py-24">
       <Shell>
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
           <div>

@@ -6,38 +6,40 @@ import { ArrowUpRight, MapPin, Navigation } from "lucide-react";
 
 export function Location({ headingAs: Heading = "h2" }: { headingAs?: "h1" | "h2" } = {}) {
   return (
-    <Section id="location" className="relative py-28 md:py-40">
+    <Section id="location" className="relative pb-20 pt-6 md:pb-28 md:pt-10">
       <Shell>
         {/* ---------- Header row ---------- */}
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
             <Eyebrow index="07">Location & connectivity</Eyebrow>
             <Heading
-              className="display mt-6 text-[clamp(2rem,4.6vw,4rem)] leading-[1.05]"
+              className="display mt-6 text-[clamp(1.75rem,3.4vw,3rem)] leading-[1.05]"
               data-reveal
             >
-              Placed where the city
+              At the centre of
               <br />
-              is already going.
+              the city's growth.
             </Heading>
           </div>
           <p
-            className="max-w-xs text-sm leading-relaxed text-muted-foreground md:text-right"
+            className="max-w-xs text-base leading-relaxed text-muted-foreground md:text-right"
             data-reveal
             data-reveal-delay="120"
           >
-            At the heart of DHA Bahawalpur, facing the Main Boulevard — 3.6 KM
+            At the heart of DHA Bahawalpur, facing the Main Boulevard, 3.6 KM
             from Bahawalpur Airport and 4.9 KM from Cantt.
           </p>
         </div>
+      </Shell>
 
-        {/* ---------- Cinematic map ---------- */}
+      {/* ---------- Cinematic map (full-screen width) ---------- */}
+      <div className="px-4 md:px-0">
         <div
-          className="group relative mt-14 aspect-[4/3] overflow-hidden bg-forest md:aspect-[21/9]"
+          className="group relative mt-8 aspect-[4/3] w-full overflow-hidden bg-forest sm:aspect-[16/9] md:mt-10 md:aspect-auto md:h-[58vh] md:min-h-[460px]"
           data-reveal
           data-reveal-delay="200"
         >
-          {/* Corner rules — blueprint framing */}
+          {/* Corner rules, blueprint framing */}
           <span className="pointer-events-none absolute left-0 top-0 z-30 h-px w-16 bg-gold/60" />
           <span className="pointer-events-none absolute left-0 top-0 z-30 h-16 w-px bg-gold/60" />
           <span className="pointer-events-none absolute right-0 top-0 z-30 h-px w-16 bg-gold/60" />
@@ -47,9 +49,9 @@ export function Location({ headingAs: Heading = "h2" }: { headingAs?: "h1" | "h2
           <span className="pointer-events-none absolute bottom-0 right-0 z-30 h-px w-16 bg-gold/60" />
           <span className="pointer-events-none absolute bottom-0 right-0 z-30 h-16 w-px bg-gold/60" />
 
-          {/* Embedded Google Map — themed */}
+          {/* Embedded Google Map, themed */}
           <iframe
-            title={`${site.name} — ${site.address}`}
+            title={`${site.name}, ${site.address}`}
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d55655.95822842423!2d71.6792491!3d29.3264156!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x393b9300455118a1%3A0x485eadcb98cce44f!2sTakmeel%20Square%20(Pvt)%20Ltd.!5e0!3m2!1sen!2s!4v1790969324225!5m2!1sen!2s"
             loading="lazy"
             allowFullScreen
@@ -60,7 +62,7 @@ export function Location({ headingAs: Heading = "h2" }: { headingAs?: "h1" | "h2
           {/* Forest multiply tint */}
           <div className="pointer-events-none absolute inset-0 z-10 bg-forest/30 mix-blend-multiply" />
 
-          {/* Radial gold vignette — warms the center, darkens the edges */}
+          {/* Radial gold vignette, warms the center, darkens the edges */}
           <div
             className="pointer-events-none absolute inset-0 z-10"
             style={{
@@ -69,7 +71,7 @@ export function Location({ headingAs: Heading = "h2" }: { headingAs?: "h1" | "h2
             }}
           />
 
-          {/* Film grain — subtle noise overlay */}
+          {/* Film grain, subtle noise overlay */}
           <div
             className="pointer-events-none absolute inset-0 z-10 opacity-[0.12] mix-blend-overlay"
             style={{
@@ -97,7 +99,7 @@ export function Location({ headingAs: Heading = "h2" }: { headingAs?: "h1" | "h2
             </span>
           </div>
 
-          {/* -------- Center pin — custom animated marker -------- */}
+          {/* -------- Center pin, custom animated marker -------- */}
           <div className="pointer-events-none absolute left-1/2 top-1/2 z-20 -translate-x-1/2 -translate-y-1/2">
             <span className="absolute inset-0 -m-8 animate-ping rounded-full border border-gold/40" />
             <span className="absolute inset-0 -m-4 rounded-full border border-gold/60" />
@@ -150,7 +152,7 @@ export function Location({ headingAs: Heading = "h2" }: { headingAs?: "h1" | "h2
             </div>
           </div>
         </div>
-      </Shell>
+      </div>
     </Section>
   );
 }

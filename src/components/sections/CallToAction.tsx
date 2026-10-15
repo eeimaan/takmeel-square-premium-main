@@ -5,7 +5,7 @@ import { scrollToSection } from "@/lib/animations/useSmoothScroll";
 
 export function CallToAction() {
   return (
-    <Section id="cta" className="relative py-32 md:py-48">
+    <Section id="cta" className="relative py-20 md:py-48">
       <img
         src={images.pool}
         alt=""

@@ -91,7 +91,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Takmeel Square — DHA Bahawalpur" },
+      { title: "Takmeel Square, DHA Bahawalpur" },
       { name: "author", content: "Takmeel Square" },
       { name: "theme-color", content: "#15322d" },
       { name: "format-detection", content: "telephone=yes" },

@@ -1,5 +1,5 @@
 // src/data/faqs.ts
-/** Frequently asked questions — shown on the site and published as FAQPage structured data. */
+/** Frequently asked questions, shown on the site and published as FAQPage structured data. */
 export const faqs: { q: string; a: string }[] = [
   {
     q: "What is Takmeel Square?",
@@ -15,15 +15,15 @@ export const faqs: { q: string; a: string }[] = [
   },
   {
     q: "What is Takmeel Bazaar?",
-    a: "Takmeel Bazaar is a 7-floor retail building with 260 shops. It brings three of Bahawalpur's historic markets under one roof — New Rangeela Bazaar (cloth), New Sarafa Bazaar (gold and jewellery) and New Tech Bazaar (mobile and technology) — with rooftop restaurants on top.",
+    a: "Takmeel Bazaar is a 7-floor retail building with 260 shops. It brings three of Bahawalpur's historic markets under one roof, New Rangeela Bazaar (cloth), New Sarafa Bazaar (gold and jewellery) and New Tech Bazaar (mobile and technology), with rooftop restaurants on top.",
   },
   {
     q: "What types of homes does Takmeel Homes offer?",
-    a: "Takmeel Homes offers luxury villas in DHA Bahawalpur — 1 Kanal homes in Sector A and 8 Marla and 10 Marla homes in Sector C.",
+    a: "Takmeel Homes offers luxury villas in DHA Bahawalpur, 1 Kanal homes in Sector A and 8 Marla and 10 Marla homes in Sector C.",
   },
   {
     q: "What amenities and facilities are available?",
-    a: "Takmeel Square features the 4-acre illuminated Glow Park, a food court, rooftop restaurants, active piazzas, landscaped walkways, 1,100 parking spaces including underground parking, a shuttle service, CCTV surveillance, a prayer area, ablution facilities and washrooms. Al-Fatah is part of the development.",
+    a: "Takmeel Square features the 4-acre illuminated Glow Park, a food court, rooftop restaurants, active piazzas, landscaped walkways, 1,100 parking spaces including underground parking, a shuttle service, CCTV surveillance, and washrooms. Al-Fatah is part of the development.",
   },
   {
     q: "Is parking available at Takmeel Square?",

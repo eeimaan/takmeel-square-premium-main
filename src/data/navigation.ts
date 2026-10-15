@@ -8,7 +8,7 @@ export interface NavItem {
 
 export const navItems: NavItem[] = [
   { label: "Home", target: "hero", href: "/" },
-  { label: "About", target: "about", href: "/about", children: [{ label: "Our story", href: "/about" }, { label: "Leadership", href: "/about#leadership" }, { label: "Location", href: "/location" }] },
+  { label: "About", target: "about", href: "/about", children: [{ label: "Our story", href: "/about" }, { label: "Leadership", href: "/about#leadership" }, { label: "Location", href: "/location" }, { label: "Testimonials", href: "/testimonials" }, { label: "Careers", href: "/careers" }, { label: "Construction Update", href: "/construction-update" }] },
   {
     label: "Projects",
     target: "projects",
@@ -17,7 +17,7 @@ export const navItems: NavItem[] = [
       { label: "Takmeel Square", href: "/projects#takmeel-square" },
       { label: "Takmeel Bazaar", href: "/projects#takmeel-bazaar" },
       { label: "Takmeel Homes", href: "/projects#takmeel-homes" },
-      { label: "Glow Park", href: "/projects#glow-park" },
+      { label: "Glow Park", href: "/project/glow-park" },
     ],
   },
   {
@@ -52,7 +52,7 @@ export const site = {
   website: "www.takmeel.pk",
   locationUrl: "https://share.google/sgDdVnAH0Y18rndqv",
   socials: [
-    { label: "Instagram", href: "https://www.instagram.com/takmeelsquare.pk/" },
+    { label: "Instagram", href: "https://instagram.com/takmeelsquare?obrf=MXR4NmJha3VmbGFrZQ%3D%3D&utm_source=qr" },
     { label: "LinkedIn", href: "https://www.linkedin.com/company/80787229" },
     { label: "Facebook", href: "https://www.facebook.com/takmeelsquare" },
     { label: "YouTube", href: "https://www.youtube.com/channel/UCoviyxhfd8qNC1Lj2HXgJTQ" },

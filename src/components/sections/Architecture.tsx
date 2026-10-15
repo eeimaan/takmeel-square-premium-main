@@ -84,7 +84,7 @@ export function Architecture() {
     <section
       id="architecture"
       ref={sectionRef}
-      className="relative w-full overflow-hidden surface-dark py-28 md:py-36 lg:motion:flex lg:motion:h-[100svh] lg:motion:items-center lg:motion:py-0"
+      className="relative w-full overflow-hidden surface-dark py-16 md:py-24 lg:motion:flex lg:motion:h-[100svh] lg:motion:items-center lg:motion:py-0"
     >
       <Shell>
         <Eyebrow index="08">Architecture & design</Eyebrow>
@@ -95,11 +95,11 @@ export function Architecture() {
             <div className="relative h-[22rem]">
               {steps.map((s, i) => (
                 <div key={s.title} data-story-text className="absolute inset-0 flex flex-col justify-center">
-                  <span className="eyebrow">0{i + 1} — {s.title}</span>
+                  <span className="eyebrow">0{i + 1}, {s.title}</span>
                   <h2 className="display mt-6 max-w-[14ch] text-[clamp(2.2rem,4.4vw,4.2rem)] text-ivory">
                     {s.lead}
                   </h2>
-                  <p className="mt-6 max-w-sm text-sm leading-relaxed text-ivory/55">{s.body}</p>
+                  <p className="mt-6 max-w-sm text-base leading-relaxed text-ivory/55">{s.body}</p>
                 </div>
               ))}
             </div>
@@ -125,9 +125,9 @@ export function Architecture() {
               <div className="aspect-[4/3] overflow-hidden" data-clip>
                 <img src={s.image} alt={s.title} loading="lazy" className="h-full w-full object-cover" />
               </div>
-              <span className="eyebrow mt-6 block">0{i + 1} — {s.title}</span>
+              <span className="eyebrow mt-6 block">0{i + 1}, {s.title}</span>
               <h3 className="display mt-3 text-3xl text-ivory">{s.lead}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-ivory/55">{s.body}</p>
+              <p className="mt-3 text-base leading-relaxed text-ivory/55">{s.body}</p>
             </div>
           ))}
         </div>

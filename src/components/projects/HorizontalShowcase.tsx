@@ -76,7 +76,7 @@ export function HorizontalShowcase() {
     <section
       id="showcase"
       ref={sectionRef}
-      className="relative w-full overflow-hidden surface-dark py-24 lg:h-[100svh] lg:py-0"
+      className="relative w-full overflow-hidden surface-dark py-14 lg:h-[100svh] lg:py-0"
     >
       <div className="lg:flex lg:h-full lg:flex-col lg:justify-center lg:pb-6 lg:pt-32">
         <Shell className="lg:shrink-0 lg:pb-8">

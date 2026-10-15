@@ -72,7 +72,7 @@ function SitePlan3D() {
           <div className="sp-floor pointer-events-none absolute inset-0" />
           <img
             src={sitePlan}
-            alt="Takmeel Square site plan — A & B Blocks, Takmeel Bazaar markets and Glow Park"
+            alt="Takmeel Square site plan, A & B Blocks, Takmeel Bazaar markets and Glow Park"
             loading="lazy"
             draggable={false}
             className="sp-map relative block h-auto w-full select-none"
@@ -97,7 +97,7 @@ function SitePlan3D() {
 
 export function ProjectDetails() {
   return (
-    <Section id="details" dark className="py-28 md:py-40">
+    <Section id="details" dark className="py-16 md:py-24">
       <Shell>
         <Eyebrow index="11">Project details</Eyebrow>
 

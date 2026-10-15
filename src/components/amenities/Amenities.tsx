@@ -56,7 +56,7 @@ export function Amenities() {
     <section
       id="amenities"
       ref={sectionRef}
-      className="relative w-full overflow-hidden surface-dark py-28 md:py-36 lg:flex lg:h-[100svh] lg:items-center lg:py-0"
+      className="relative w-full overflow-hidden surface-dark py-16 md:py-24 lg:flex lg:h-[100svh] lg:items-center lg:py-0"
     >
       <Shell>
         <Eyebrow index="06">Amenities</Eyebrow>

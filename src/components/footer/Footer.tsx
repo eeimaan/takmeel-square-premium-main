@@ -14,13 +14,14 @@ const socialIcons: Record<string, typeof Instagram> = {
   YouTube: Youtube,
 };
 
-/** Column groups — Damac-style multi-column footer, Takmeel content. */
-const columns: { title: string; links: { label: string; to: string; hash?: string }[] }[] = [
+/** Column groups, Damac-style multi-column footer, Takmeel content. */
+const columns: { title: string; links: { label: string; to: string; hash?: string; projectId?: string }[] }[] = [
   {
     title: "Why Takmeel",
     links: [
       { label: "About Takmeel Square", to: "/about" },
       { label: "Our Leadership", to: "/about", hash: "leadership" },
+      { label: "Testimonials", to: "/testimonials" },
       { label: "Location", to: "/location" },
       { label: "Contact Us", to: "/contact" },
     ],
@@ -28,22 +29,23 @@ const columns: { title: string; links: { label: string; to: string; hash?: strin
   {
     title: "Takmeel Bazaar",
     links: [
-      { label: "New Rangeela Bazaar", to: "/tour", hash: "tour-bazaar" },
-      { label: "New Sarafa Bazaar", to: "/tour", hash: "tour-bazaar" },
-      { label: "New Tech Bazaar", to: "/tour", hash: "tour-bazaar" },
-      { label: "Rooftop Restaurants", to: "/tour", hash: "tour-restaurants" },
+      { label: "New Rangeela Bazaar", to: "/projects", projectId: "takmeel-bazaar" },
+      { label: "New Sarafa Bazaar", to: "/projects", projectId: "takmeel-bazaar" },
+      { label: "New Tech Bazaar", to: "/projects", projectId: "takmeel-bazaar" },
     ],
   },
   {
     title: "Featured Projects",
-    links: projects.map((p) => ({ label: p.name, to: "/projects", hash: p.id })),
+    links: [
+      ...projects.map((p) => ({ label: p.name, to: "/projects", projectId: p.id })),
+      { label: "Rooftop Restaurants", to: "/tour", hash: "tour-restaurants" },
+    ],
   },
   {
     title: "Experience",
     links: [
       { label: "Virtual Tour", to: "/tour" },
-      { label: "Takmeel Homes Tour", to: "/tour", hash: "tour-house" },
-      { label: "Location", to: "/location" },
+      { label: "Construction Update", to: "/construction-update" },
       { label: "Book a Visit", to: "/book", hash: "visit" },
     ],
   },
@@ -51,6 +53,7 @@ const columns: { title: string; links: { label: string; to: string; hash?: strin
     title: "Takmeel Assist",
     links: [
       { label: "Contact Us", to: "/contact" },
+      { label: "Careers", to: "/careers" },
       { label: "Schedule Call", to: "/book", hash: "call" },
     ],
   },
@@ -59,7 +62,8 @@ const columns: { title: string; links: { label: string; to: string; hash?: strin
 const legal = [
   { label: "Privacy Policy", to: "/privacy-policy" },
   { label: "Terms & Conditions", to: "/terms" },
-  { label: "Disclaimer", to: "/disclaimer" },
+  // Disclaimer hidden per request
+  // { label: "Disclaimer", to: "/disclaimer" },
 ];
 
 export function Footer() {
@@ -119,9 +123,9 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="text-sm text-ivory/80">Sign up for our exclusive newsletter</p>
+            <p className="text-sm text-ivory/80">Stay updated with our latest news and events</p>
             {subscribed ? (
-              <p className="mt-4 text-sm text-gold">Thank you — you're on the list.</p>
+              <p className="mt-4 text-sm text-gold">Thank you, you're on the list.</p>
             ) : (
               <form onSubmit={onSubscribe} className="mt-4">
                 <div className="flex items-center rounded-full border border-ivory/25 bg-ivory/5 focus-within:border-gold">
@@ -160,16 +164,27 @@ export function Footer() {
             <div key={col.title}>
               <p className="eyebrow mb-6 text-gold">{col.title}</p>
               <nav className="flex flex-col gap-3" aria-label={col.title}>
-                {col.links.map((l, i) => (
-                  <Link
-                    key={`${col.title}-${l.label}-${i}`}
-                    to={l.to}
-                    {...(l.hash ? { hash: l.hash } : {})}
-                    className="link-underline w-fit text-sm text-ivory/70 transition-colors hover:text-gold"
-                  >
-                    {l.label}
-                  </Link>
-                ))}
+                {col.links.map((l, i) =>
+                  l.projectId ? (
+                    <Link
+                      key={`${col.title}-${l.label}-${i}`}
+                      to="/project/$projectId"
+                      params={{ projectId: l.projectId }}
+                      className="link-underline w-fit text-sm text-ivory/70 transition-colors hover:text-gold"
+                    >
+                      {l.label}
+                    </Link>
+                  ) : (
+                    <Link
+                      key={`${col.title}-${l.label}-${i}`}
+                      to={l.to}
+                      {...(l.hash ? { hash: l.hash } : {})}
+                      className="link-underline w-fit text-sm text-ivory/70 transition-colors hover:text-gold"
+                    >
+                      {l.label}
+                    </Link>
+                  ),
+                )}
               </nav>
             </div>
           ))}
@@ -181,7 +196,7 @@ export function Footer() {
               {offices.map((o) => (
                 <div key={o.label}>
                   <p className="text-[0.62rem] uppercase tracking-[0.18em] text-ivory/45">{o.label}</p>
-                  <p className="mt-1 max-w-[16rem] text-sm leading-relaxed text-ivory/70">{o.value}</p>
+                  <p className="mt-1 max-w-[16rem] text-base leading-relaxed text-ivory/70">{o.value}</p>
                 </div>
               ))}
             </div>

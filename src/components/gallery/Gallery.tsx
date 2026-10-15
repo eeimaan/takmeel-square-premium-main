@@ -8,7 +8,7 @@ import { loadGsap, prefersReducedMotion } from "@/lib/animations/gsap";
 type Frame = (typeof lifestyleReel)[number];
 
 /**
- * Full-bleed floating wall — edge to edge, hairline gutters, no empty space.
+ * Full-bleed floating wall, edge to edge, hairline gutters, no empty space.
  * Desktop: five columns that each drift at their own speed (some rise, some sink) while you scroll,
  * so frames float past each other like bubbles. Every frame pops in, breathes slowly,
  * zooms on hover and opens in the lightbox. Columns are taller than the stage, so edges never show.
@@ -27,7 +27,7 @@ function Tile({ f, i, mobile = false }: { f: Frame; i: number; mobile?: boolean 
     >
       <img
         src={f.image}
-        alt={`${f.title} — ${f.place}`}
+        alt={`${f.title}, ${f.place}`}
         loading="lazy"
         decoding="async"
         className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.08]"
@@ -95,7 +95,7 @@ export function Gallery() {
   }, []);
 
   return (
-    <Section id="lifestyle" className="pt-28 md:pt-40">
+    <Section id="lifestyle" className="pt-20 md:pt-28">
       <style>{`
         @keyframes wall-breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.045)}}
         #lifestyle [data-tile]:hover img{animation-play-state:paused}

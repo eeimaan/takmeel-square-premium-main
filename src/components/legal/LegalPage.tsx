@@ -9,11 +9,18 @@ const others: { slug: LegalDoc["slug"]; to: string }[] = [
   { slug: "disclaimer", to: "/disclaimer" },
 ];
 
-/** Shared layout for Privacy Policy, Terms and Disclaimer — same header and type scale as the rest of the site. */
+/** Shared layout for Privacy Policy, Terms and Disclaimer, same header and type scale as the rest of the site. */
+/** Renders **bold** spans inside legal copy. */
+function renderInline(text: string) {
+  return text.split("**").map((part, i) =>
+    i % 2 === 1 ? <strong key={i} className="font-medium text-foreground">{part}</strong> : part,
+  );
+}
+
 export function LegalPage({ doc }: { doc: LegalDoc }) {
   return (
     <>
-      <section className="surface-dark pb-16 pt-40 md:pb-20 md:pt-48">
+      <section className="surface-dark pb-16 pt-20 md:pb-20 md:pt-48">
         <Shell>
           <span className="eyebrow text-gold">Legal · Last updated {LAST_UPDATED}</span>
           <h1 className="display mt-6 text-[clamp(2.6rem,7vw,6rem)]">{doc.title}</h1>
@@ -51,7 +58,7 @@ export function LegalPage({ doc }: { doc: LegalDoc }) {
                 </h2>
                 {s.body.map((p) => (
                   <p key={p.slice(0, 32)} className="mt-4 text-base leading-relaxed text-muted-foreground">
-                    {p}
+                    {renderInline(p)}
                   </p>
                 ))}
               </section>

@@ -10,7 +10,7 @@ export function PropertyTypes() {
   const current = propertyTypes[active] ?? propertyTypes[0]!;
 
   return (
-    <Section id="residences" className="py-28 md:py-40">
+    <Section id="residences" className="py-16 md:py-24">
       <Shell>
         <Eyebrow index="05">Spaces at Takmeel Square</Eyebrow>
 
