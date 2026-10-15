@@ -37,7 +37,7 @@ export const amenities: Amenity[] = [
   {
     id: "rooftop",
     title: "Rooftop Restaurants",
-    description: "Open-air rooftop dining and a food court above Takmeel Bazaar.",
+    description: "Open air rooftop dining and a food court above Takmeel Bazaar.",
     image: images.rooftopLounge,
   },
   {
@@ -48,7 +48,7 @@ export const amenities: Amenity[] = [
   },
   {
     id: "anchor",
-    title: "Al-Fatah",
+    title: "Al Fatah",
     description: "An anchor retail destination within Takmeel Square.",
     image: images.renAlfatah,
   },
@@ -71,11 +71,11 @@ export const whyPoints = [
   },
   {
     title: "Integrated model",
-    body: "An inclusive integrated retail and open-market model that empowers investors and business owners.",
+    body: "An inclusive integrated retail and open market model that empowers investors and business owners.",
   },
   {
     title: "Attention to detail",
-    body: "Unmatched innovation, meticulous attention to detail and eco-friendly practices throughout.",
+    body: "Unmatched innovation, meticulous attention to detail and eco friendly practices throughout.",
   },
 ];
 

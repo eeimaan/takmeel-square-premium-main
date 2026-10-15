@@ -395,7 +395,7 @@ export const tours: TourProperty[] = [
         image: hBed1,
         links: [
           { to: "bed1-2", x: 70, y: 60, label: "Sitting corner" },
-          { to: "bath1", x: 20, y: 55, label: "En-suite bathroom" },
+          { to: "bath1", x: 20, y: 55, label: "En suite bathroom" },
           { to: "ff-lounge", x: 50, y: 88, label: "Back to lounge" },
         ],
       },
@@ -439,7 +439,7 @@ export const tours: TourProperty[] = [
         image: hBed2,
         links: [
           { to: "bed2-2", x: 70, y: 60, label: "Bed view" },
-          { to: "bath2", x: 20, y: 55, label: "En-suite bathroom" },
+          { to: "bath2", x: 20, y: 55, label: "En suite bathroom" },
           { to: "ff-lounge-2", x: 50, y: 88, label: "Back to lounge" },
         ],
       },
@@ -611,13 +611,13 @@ export const tours: TourProperty[] = [
         title: "Bazaar boulevard",
         image: bazaarStreet,
         links: [
-          { to: "gatehouse", x: 75, y: 70, label: "Gatehouse & drop-off" },
+          { to: "gatehouse", x: 75, y: 70, label: "Gatehouse & drop off" },
           { to: "corner", x: 15, y: 80, label: "Back to corner view" },
         ],
       },
       {
         id: "gatehouse",
-        title: "Gatehouse & drop-off",
+        title: "Gatehouse & drop off",
         image: bazaarGatehouse,
         links: [
           { to: "shuttle", x: 75, y: 70, label: "Shuttle service" },
@@ -782,7 +782,7 @@ export const tours: TourProperty[] = [
     scenes: [
       {
         id: "gym",
-        title: "State-of-the-art gym",
+        title: "State of the art gym",
         image: renGym,
         links: [{ to: "gym-2", x: 65, y: 62, label: "Strength & training floor" }],
       },

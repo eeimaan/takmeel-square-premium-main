@@ -117,7 +117,7 @@ export function Gallery() {
       </div>
 
       {/* Desktop: full-bleed floating columns */}
-      <div ref={wallRef} className="relative hidden h-[150svh] w-full overflow-hidden md:block">
+      <div ref={wallRef} className="relative hidden h-[85svh] w-full overflow-hidden md:block">
         <div className="absolute inset-x-0 -bottom-[14%] -top-[14%] grid grid-cols-5 gap-2 px-2">
           {columns.map((col, c) => (
             <div

@@ -37,7 +37,7 @@ export const constructionUpdates: ConstructionUpdate[] = [
     date: "August 2026",
     title: "Takmeel Bazaar, upper floors in progress",
     summary:
-      "Concrete works have reached the upper retail floors of the 7-floor Takmeel Bazaar. Internal partitions for New Rangeela, New Sarafa and New Tech Bazaar are being laid out.",
+      "Concrete works have reached the upper retail floors of the 7 floor Takmeel Bazaar. Internal partitions for New Rangeela, New Sarafa and New Tech Bazaar are being laid out.",
     progress: 58,
     image: images.bazaarFacadeHq,
     video: TEMP_VIDEO,
@@ -47,7 +47,7 @@ export const constructionUpdates: ConstructionUpdate[] = [
     date: "June 2026",
     title: "Glow Park, landscaping and hardscape",
     summary:
-      "Earthworks and hardscaping are underway across the 4-acre Glow Park, alongside the food-court foundations and the surrounding parking and walkways.",
+      "Earthworks and hardscaping are underway across the 4 acre Glow Park, alongside the food court foundations and the surrounding parking and walkways.",
     progress: 40,
     image: images.squareParkParking,
     video: TEMP_VIDEO,

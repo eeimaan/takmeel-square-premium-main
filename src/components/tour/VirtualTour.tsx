@@ -111,13 +111,13 @@ export function VirtualTour({ headingAs: Heading = "h2" }: { headingAs?: "h1" | 
       className={`relative cursor-grab touch-none select-none overflow-hidden bg-forest active:cursor-grabbing ${
          full ? "h-full w-full" : "mx-auto max-w-full"
       }`}
-      style={full ? undefined : { aspectRatio: imageRatio, width: "100%", maxHeight: "min(76svh, 850px)" }}
+      style={full ? undefined : { aspectRatio: "16 / 9", width: "100%", maxHeight: "min(76svh, 850px)" }}
     >
       {prevImg && (
         <img
           src={prevImg}
           alt=""
-          className="pointer-events-none absolute inset-0 z-10 h-full w-full object-contain"
+          className="pointer-events-none absolute inset-0 z-10 h-full w-full object-cover"
           style={{ animation: "tour-out 0.9s cubic-bezier(.65,0,.35,1) forwards" }}
         />
       )}
@@ -130,7 +130,7 @@ export function VirtualTour({ headingAs: Heading = "h2" }: { headingAs?: "h1" | 
           const image = event.currentTarget;
           if (image.naturalHeight) setImageRatio(image.naturalWidth / image.naturalHeight);
         }}
-        className="pointer-events-none absolute inset-0 h-full w-full object-contain transition-transform duration-300 ease-out"
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover transition-transform duration-300 ease-out"
         style={{ transform }}
       />
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-forest/80 via-transparent to-forest/30" />
@@ -245,7 +245,7 @@ export function VirtualTour({ headingAs: Heading = "h2" }: { headingAs?: "h1" | 
                 s.id === scene.id ? "ring-2 ring-gold ring-offset-2 ring-offset-secondary" : "opacity-60 hover:opacity-100"
               }`}
             >
-              <img src={s.image} alt={s.title} loading="lazy" className="h-full w-full object-contain bg-forest" />
+              <img src={s.image} alt={s.title} loading="lazy" className="h-full w-full object-cover bg-forest" />
             </Button>
           ))}
         </div>

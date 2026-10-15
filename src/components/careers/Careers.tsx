@@ -117,7 +117,7 @@ export function Careers() {
                 Send us your application.
               </h2>
               <p className="mt-6 max-w-sm text-base leading-relaxed text-ivory/60">
-                Fill in your details, choose the role, and your email app will open with everything pre-filled. Attach
+                Fill in your details, choose the role, and your email app will open with everything pre filled. Attach
                 your CV before sending.
               </p>
             </div>

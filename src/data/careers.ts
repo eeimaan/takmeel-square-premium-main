@@ -10,7 +10,7 @@ export const CAREERS_EMAIL = "info@takmeel.pk";
 export interface Role {
   id: string;
   title: string;
-  type: string;        // Full-time / Part-time
+  type: string;        // Full time / Part time
   location: string;
   positions: string;   // e.g. "2 positions"
   overview: string;
@@ -22,11 +22,11 @@ export const roles: Role[] = [
   {
     id: "site-supervisor",
     title: "Site Supervisor",
-    type: "Full-time",
+    type: "Full time",
     location: "Takmeel Square, DHA Bahawalpur",
     positions: "2 positions",
     overview:
-      "Oversee day-to-day construction activities on site, ensuring work is carried out to schedule, quality and safety standards.",
+      "Oversee day to day construction activities on site, ensuring work is carried out to schedule, quality and safety standards.",
     responsibilities: [
       "Supervise contractors and labour on site",
       "Track daily progress against the construction schedule",
@@ -42,7 +42,7 @@ export const roles: Role[] = [
   {
     id: "civil-engineer",
     title: "Civil Engineer",
-    type: "Full-time",
+    type: "Full time",
     location: "Takmeel Square, DHA Bahawalpur",
     positions: "1 position",
     overview:
@@ -62,7 +62,7 @@ export const roles: Role[] = [
   {
     id: "sales-executive",
     title: "Sales Executive",
-    type: "Full-time",
+    type: "Full time",
     location: "DHA Bahawalpur / Lahore",
     positions: "4 positions",
     overview:
@@ -74,19 +74,19 @@ export const roles: Role[] = [
       "Maintain accurate records of clients and deals",
     ],
     requirements: [
-      "Bachelor's degree; real-estate experience preferred",
+      "Bachelor's degree; real estate experience preferred",
       "Excellent communication and negotiation skills",
-      "Confident, presentable and target-driven",
+      "Confident, presentable and target driven",
     ],
   },
   {
     id: "marketing-officer",
     title: "Marketing Officer",
-    type: "Full-time",
+    type: "Full time",
     location: "DHA Bahawalpur",
     positions: "1 position",
     overview:
-      "Plan and run marketing campaigns across digital and on-ground channels to generate quality leads.",
+      "Plan and run marketing campaigns across digital and on ground channels to generate quality leads.",
     responsibilities: [
       "Manage social media and digital advertising",
       "Coordinate content, shoots and collateral",
@@ -96,17 +96,17 @@ export const roles: Role[] = [
     requirements: [
       "Degree in Marketing / Media / related field",
       "2+ years in marketing, ideally real estate",
-      "Hands-on with Meta/Google Ads and analytics",
+      "Hands on with Meta/Google Ads and analytics",
     ],
   },
   {
     id: "accounts-officer",
     title: "Accounts Officer",
-    type: "Full-time",
+    type: "Full time",
     location: "Takmeel Square, DHA Bahawalpur",
     positions: "1 position",
     overview:
-      "Maintain accurate financial records, process payments and support month-end reporting.",
+      "Maintain accurate financial records, process payments and support month end reporting.",
     responsibilities: [
       "Record daily transactions and reconcile accounts",
       "Manage client receivables and vendor payments",
@@ -121,20 +121,20 @@ export const roles: Role[] = [
   {
     id: "customer-relations-officer",
     title: "Customer Relations Officer",
-    type: "Full-time",
+    type: "Full time",
     location: "Takmeel Square, DHA Bahawalpur",
     positions: "2 positions",
     overview:
-      "Be the first point of contact for clients, handling queries and after-sales support with care.",
+      "Be the first point of contact for clients, handling queries and after sales support with care.",
     responsibilities: [
-      "Attend to walk-in, phone and online enquiries",
+      "Attend to walk in, phone and online enquiries",
       "Coordinate documentation and bookings",
       "Resolve client concerns and maintain relationships",
     ],
     requirements: [
       "Bachelor's degree",
       "Strong interpersonal and communication skills",
-      "Customer-service mindset; fluent in Urdu and English",
+      "Customer service mindset; fluent in Urdu and English",
     ],
   },
 ];

@@ -8,7 +8,7 @@ export interface NavItem {
 
 export const navItems: NavItem[] = [
   { label: "Home", target: "hero", href: "/" },
-  { label: "About", target: "about", href: "/about", children: [{ label: "Our story", href: "/about" }, { label: "Leadership", href: "/about#leadership" }, { label: "Location", href: "/location" }, { label: "Testimonials", href: "/testimonials" }, { label: "Careers", href: "/careers" }, { label: "Construction Update", href: "/construction-update" }] },
+  { label: "About", target: "about", href: "/about", children: [{ label: "Our story", href: "/about" }, { label: "Leadership", href: "/about#leadership" }, { label: "Location", href: "/location" }, { label: "Construction Update", href: "/construction-update" }, { label: "Testimonials", href: "/testimonials" }, { label: "Careers", href: "/careers" }] },
   {
     label: "Projects",
     target: "projects",

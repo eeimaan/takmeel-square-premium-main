@@ -23,13 +23,13 @@ export function About({ headingAs: Heading = "h2" }: { headingAs?: "h1" | "h2" }
             <p className="text-base leading-relaxed text-muted-foreground">
               Takmeel Square, encompassing 1.2 million square feet, is the largest
               commercial hub of Southern Punjab, an inclusive integrated retail and
-              open-market model, empowering investors and business owners to become
+              open market model, empowering investors and business owners to become
               the architects of their future success.
             </p>
             <p className="text-base leading-relaxed text-muted-foreground">
-              Set within DHA Bahawalpur's sustainable, master-planned community,
+              Set within DHA Bahawalpur's sustainable, master planned community,
               Takmeel Square brings together Takmeel Bazaar, Takmeel Homes and the
-              4-acre Glow Park, fostering business, elevating lifestyles and
+              4 acre Glow Park, fostering business, elevating lifestyles and
               shaping South Punjab's economic future.
             </p>
             <dl className="hidden grid-cols-3 gap-6 border-t border-border pt-8">

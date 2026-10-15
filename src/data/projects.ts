@@ -202,7 +202,7 @@ export const projects: Project[] = [
     type: "Commercial Hub",
     status: "Flagship",
     description:
-      "South Punjab's premier commercial hub, 1.2 million square feet built on an inclusive, integrated retail and open-market model, with A Block facing the Main Boulevard and B Block facing Glow Park.",
+      "South Punjab's flagship address, bringing the Main Boulevard, Takmeel Bazaar, Takmeel Homes and the Glow Park together across 1.2 million sq ft.",
     image: images.renSqAerial,
     stats: [
       { label: "Covered area", value: "1.2M sq ft" },
@@ -217,7 +217,7 @@ export const projects: Project[] = [
     type: "Retail & Open Markets",
     status: "Retail",
     description:
-      "A well-planned 7-floor high-rise of 260 shops bringing together three major historical markets of Bahawalpur, New Rangeela Bazaar, New Sarafa Bazaar and New Tech Bazaar, topped with rooftop restaurants.",
+      "Bahawalpur's three legendary markets reborn under one roof, New Rangeela, New Sarafa and New Tech Bazaar, crowned with rooftop restaurants.",
     image: images.renBzBoulevard,
     stats: [
       { label: "Shops", value: "260" },
@@ -232,7 +232,7 @@ export const projects: Project[] = [
     type: "Luxury Villas",
     status: "Residential",
     description:
-      "Fully completed luxury homes designed for comfort and modern living, 1 Kanal villas in Sector A and 8 & 10 Marla homes in Sector C of DHA Bahawalpur.",
+      "Move in ready luxury villas built around family life, with generous living spaces, private lawns and refined finishes throughout.",
     image: images.renHomeKanal,
     stats: [
       { label: "Sector A", value: "1 Kanal" },
@@ -247,7 +247,7 @@ export const projects: Project[] = [
     type: "Illuminated Park & Food Court",
     status: "Leisure",
     description:
-      "An illuminated park spanning 4 acres beside Takmeel Square, a place to relax and gather, with a food court, seating and landscaped walkways.",
+      "Four illuminated acres of gardens, walkways and open air dining beside Takmeel Square, where the evenings come alive.",
     image: images.renGlowWalk,
     stats: [
       { label: "Area", value: "4 Acres" },
@@ -258,38 +258,43 @@ export const projects: Project[] = [
 ];
 
 /** Gallery images per project, used on the individual project detail pages (/project/$id). */
-export const projectGalleries: Record<string, string[]> = {
+export interface GalleryItem {
+  src: string;
+  name: string;
+}
+
+export const projectGalleries: Record<string, GalleryItem[]> = {
   "takmeel-square": [
-    images.renSqAerial,
-    images.renSqDistrict,
-    images.renSqBoulevard,
-    images.squareCanopyStreet,
-    images.squareSunsetCourt,
-    images.squareCafeCanopy,
+    { src: images.renSqAerial, name: "Aerial view" },
+    { src: images.renSqDistrict, name: "Commercial district" },
+    { src: images.renSqBoulevard, name: "Main Boulevard" },
+    { src: images.squareCanopyStreet, name: "Canopy street" },
+    { src: images.squareSunsetCourt, name: "Central court" },
+    { src: images.squareCafeCanopy, name: "Café under the canopies" },
   ],
   "takmeel-bazaar": [
-    images.renBzBoulevard,
-    images.renBzGallery,
-    images.renBzEscalator,
-    images.renRangeela,
-    images.renSarafa,
-    images.renTech,
+    { src: images.renBzBoulevard, name: "Bazaar boulevard" },
+    { src: images.renBzGallery, name: "Grand retail gallery" },
+    { src: images.renBzEscalator, name: "Escalator junction" },
+    { src: images.renRangeela, name: "New Rangeela Bazaar" },
+    { src: images.renSarafa, name: "New Sarafa Bazaar" },
+    { src: images.renTech, name: "New Tech Bazaar" },
   ],
   "takmeel-homes": [
-    images.houseView02,
-    images.lounge,
-    images.homeDining,
-    images.homeKitchen,
-    images.bedroomA,
-    images.houseLawn,
+    { src: images.houseView02, name: "Villa exterior" },
+    { src: images.lounge, name: "Living room" },
+    { src: images.homeDining, name: "Dining room" },
+    { src: images.homeKitchen, name: "Kitchen" },
+    { src: images.bedroomA, name: "Master bedroom" },
+    { src: images.houseLawn, name: "Private lawn" },
   ],
   "glow-park": [
-    images.renGlowWalk,
-    images.renGlowEvening,
-    images.renGlowOasis,
-    images.renGlowRestaurant,
-    images.renGlowEntrance,
-    images.renGlowFoodcourt,
+    { src: images.renGlowWalk, name: "Park walkway" },
+    { src: images.renGlowEvening, name: "Evening piazza" },
+    { src: images.renGlowOasis, name: "Horticultural oasis" },
+    { src: images.renGlowRestaurant, name: "Park restaurant" },
+    { src: images.renGlowEntrance, name: "Park entrance" },
+    { src: images.renGlowFoodcourt, name: "Food court" },
   ],
 };
 
@@ -328,7 +333,7 @@ export const propertyTypes: PropertyType[] = [
   {
     id: "rooftop-restaurants",
     title: "Rooftop Restaurants",
-    blurb: "Open-air rooftop dining and a food court above Takmeel Bazaar.",
+    blurb: "Open air rooftop dining and a food court above Takmeel Bazaar.",
     image: images.rooftopFoodCourt,
   },
   {
@@ -357,7 +362,7 @@ export const lifestyleReel = [
   { image: images.houseLawn, title: "Private garden", place: "Takmeel Homes" },
   { image: images.squareBoulevardDay, title: "Main Boulevard", place: "Takmeel Square" },
   { image: images.bedroomA, title: "Master suite", place: "Takmeel Homes" },
-  { image: images.squareCafeCanopy, title: "Café under the canopies", place: "Takmeel Square" },
+  { image: images.renGlowEvening, title: "Evening at Glow Park", place: "Glow Park" },
   { image: images.bazaarGatehouse, title: "Bazaar arrival", place: "Takmeel Bazaar" },
   { image: images.homeKitchen, title: "Kitchen", place: "Takmeel Homes" },
   { image: images.restaurantStreet, title: "Restaurant street", place: "Takmeel Square" },

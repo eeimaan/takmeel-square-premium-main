@@ -31,14 +31,14 @@ export const projectSpecs: ProjectSpec[] = [
       { label: "A Block", value: "Faces Main Boulevard" },
       { label: "B Block", value: "Faces Glow Park" },
     ],
-    amenities: ["IT Hub", "Builders Mall", "Al-Fatah", "Active piazzas", "CCTV"],
+    amenities: ["IT Hub", "Builders Mall", "Al Fatah", "Active piazzas", "CCTV"],
   },
   {
     id: "takmeel-bazaar",
     name: "Takmeel Bazaar",
     schemaType: "ShoppingCenter",
     summary:
-      "Takmeel Bazaar is a 7-floor retail building with 260 shops inside Takmeel Square, DHA Bahawalpur, housing New Rangeela Bazaar, New Sarafa Bazaar and New Tech Bazaar with rooftop restaurants.",
+      "Takmeel Bazaar is a 7 floor retail building with 260 shops inside Takmeel Square, DHA Bahawalpur, housing New Rangeela Bazaar, New Sarafa Bazaar and New Tech Bazaar with rooftop restaurants.",
     rows: [
       { label: "Location", value: "Takmeel Square, DHA Bahawalpur" },
       { label: "Floors", value: "7" },
@@ -61,14 +61,14 @@ export const projectSpecs: ProjectSpec[] = [
       { label: "Sector C", value: "8 & 10 Marla homes" },
       { label: "Type", value: "Fully built luxury villas" },
     ],
-    amenities: ["Car porch", "Private lawn", "Drawing & dining", "Kitchen", "En-suite bathrooms", "First-floor lounge"],
+    amenities: ["Car porch", "Private lawn", "Drawing & dining", "Kitchen", "En suite bathrooms", "First floor lounge"],
   },
   {
     id: "glow-park",
     name: "Glow Park",
     schemaType: "Park",
     summary:
-      "Glow Park is a 4-acre illuminated park beside Takmeel Square in DHA Bahawalpur, with a food court, seating for 600 and parking for 1,100 cars.",
+      "Glow Park is a 4 acre illuminated park beside Takmeel Square in DHA Bahawalpur, with a food court, seating for 600 and parking for 1,100 cars.",
     rows: [
       { label: "Location", value: "Takmeel Square, DHA Bahawalpur" },
       { label: "Area", value: "4 acres" },

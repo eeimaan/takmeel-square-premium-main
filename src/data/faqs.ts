@@ -3,7 +3,7 @@
 export const faqs: { q: string; a: string }[] = [
   {
     q: "What is Takmeel Square?",
-    a: "Takmeel Square is a 1.2 million square feet commercial hub in DHA Bahawalpur and the largest commercial development in South Punjab. It brings together commercial units, Takmeel Bazaar, Takmeel Homes and the 4-acre Glow Park in one integrated retail and open-market destination.",
+    a: "Takmeel Square is a 1.2 million square feet commercial hub in DHA Bahawalpur and the largest commercial development in South Punjab. It brings together commercial units, Takmeel Bazaar, Takmeel Homes and the 4 acre Glow Park in one integrated retail and open market destination.",
   },
   {
     q: "Where is Takmeel Square located?",
@@ -15,7 +15,7 @@ export const faqs: { q: string; a: string }[] = [
   },
   {
     q: "What is Takmeel Bazaar?",
-    a: "Takmeel Bazaar is a 7-floor retail building with 260 shops. It brings three of Bahawalpur's historic markets under one roof, New Rangeela Bazaar (cloth), New Sarafa Bazaar (gold and jewellery) and New Tech Bazaar (mobile and technology), with rooftop restaurants on top.",
+    a: "Takmeel Bazaar is a 7 floor retail building with 260 shops. It brings three of Bahawalpur's historic markets under one roof, New Rangeela Bazaar (cloth), New Sarafa Bazaar (gold and jewellery) and New Tech Bazaar (mobile and technology), with rooftop restaurants on top.",
   },
   {
     q: "What types of homes does Takmeel Homes offer?",
@@ -23,7 +23,7 @@ export const faqs: { q: string; a: string }[] = [
   },
   {
     q: "What amenities and facilities are available?",
-    a: "Takmeel Square features the 4-acre illuminated Glow Park, a food court, rooftop restaurants, active piazzas, landscaped walkways, 1,100 parking spaces including underground parking, a shuttle service, CCTV surveillance, and washrooms. Al-Fatah is part of the development.",
+    a: "Takmeel Square features the 4 acre illuminated Glow Park, a food court, rooftop restaurants, active piazzas, landscaped walkways, 1,100 parking spaces including underground parking, a shuttle service, CCTV surveillance, and washrooms. Al Fatah is part of the development.",
   },
   {
     q: "Is parking available at Takmeel Square?",

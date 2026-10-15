@@ -55,6 +55,7 @@ export function ProjectDetail({ projectId }: { projectId: string }) {
       <section className="relative flex min-h-[72vh] items-end overflow-hidden pt-20">
         <img src={project.image} alt={project.name} className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-onyx/90 via-onyx/45 to-onyx/55" />
+        <span className="pointer-events-none absolute inset-4 z-10 border border-gold/30 md:inset-8" />
         <Shell className="relative pb-14 md:pb-20">
           <Link
             to="/projects"
@@ -139,7 +140,7 @@ export function ProjectDetail({ projectId }: { projectId: string }) {
               New Rangeela, New Sarafa and New Tech Bazaar.
             </h2>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground" data-reveal>
-              Takmeel Bazaar brings three of Bahawalpur's historic markets together in one 7-floor building of 260
+              Takmeel Bazaar brings three of Bahawalpur's historic markets together in one 7 floor building of 260
               shops, topped with rooftop restaurants.
             </p>
 
@@ -160,6 +161,7 @@ export function ProjectDetail({ projectId }: { projectId: string }) {
                     <span className="absolute left-0 top-0 bg-onyx/80 px-4 py-2 text-[0.6rem] uppercase tracking-[0.24em] text-gold">
                       {b.tag}
                     </span>
+                    <span className="pointer-events-none absolute inset-3 z-10 border border-gold/30" />
                   </div>
                   <div className="flex min-w-0 flex-col justify-center">
                     <h3 className="display text-[clamp(1.6rem,3vw,2.4rem)]">{b.name}</h3>
@@ -181,19 +183,23 @@ export function ProjectDetail({ projectId }: { projectId: string }) {
               A closer look.
             </h2>
             <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {gallery.map((src, i) => (
+              {gallery.map((g, i) => (
                 <div
-                  key={src}
-                  className="relative aspect-[4/3] overflow-hidden"
+                  key={g.src}
+                  className="group relative aspect-[4/3] overflow-hidden"
                   data-reveal
                   data-reveal-delay={`${Math.min(i, 5) * 60}`}
                 >
                   <img
-                    src={src}
-                    alt={`${project.name}, view ${i + 1}`}
+                    src={g.src}
+                    alt={`${project.name}, ${g.name}`}
                     loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.04]"
+                    className="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]"
                   />
+                  <div className="pointer-events-none absolute inset-0 flex items-end bg-gradient-to-t from-onyx/85 via-transparent to-transparent p-5 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                    <span className="text-[0.66rem] uppercase tracking-[0.2em] text-ivory">{g.name}</span>
+                  </div>
+                  <span className="pointer-events-none absolute inset-3 z-10 border border-gold/30" />
                 </div>
               ))}
             </div>

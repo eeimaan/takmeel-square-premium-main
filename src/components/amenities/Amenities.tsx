@@ -80,6 +80,7 @@ export function Amenities() {
               />
             ))}
             <div className="absolute inset-0 bg-gradient-to-t from-onyx/80 via-onyx/10 to-transparent" />
+            <span className="pointer-events-none absolute inset-4 z-10 border border-gold/30" />
             <div key={current.id} className="absolute inset-x-0 bottom-0 p-6 md:p-10">
               <span className="eyebrow animate-fade-in">
                 {String(active + 1).padStart(2, "0")} / {String(amenities.length).padStart(2, "0")}

@@ -55,7 +55,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "A genuinely well-planned commercial hub for Bahawalpur. The piazzas, parking and the Glow Park make it a destination, not just a market.",
+      "A genuinely well planned commercial hub for Bahawalpur. The piazzas, parking and the Glow Park make it a destination, not just a market.",
     name: "Sana Tariq",
     context: "Takmeel Square, 4 Marla Commercial",
     date: "May 2026",

@@ -23,8 +23,8 @@ export function FeaturedProjects({ headingAs: Heading = "h2", omitId }: { headin
             data-reveal
             data-reveal-delay="140"
           >
-            Commerce, retail and homes, brought together in one address at the
-            heart of DHA Bahawalpur.
+            1.2 million sq ft of commerce, retail and homes, with 260 shops and
+            a 4 acre Glow Park, all at one address in DHA Bahawalpur.
           </p>
         </div>
 
@@ -46,6 +46,7 @@ export function FeaturedProjects({ headingAs: Heading = "h2", omitId }: { headin
                 <span className="absolute left-0 top-0 bg-onyx/80 px-4 py-2 text-[0.6rem] uppercase tracking-[0.28em] text-gold">
                   {p.status}
                 </span>
+                <span className="pointer-events-none absolute inset-3 z-10 border border-gold/30" />
               </div>
 
               <div className="flex min-w-0 flex-col justify-center">

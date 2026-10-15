@@ -37,10 +37,10 @@ export const legalDocs: Record<LegalDoc["slug"], LegalDoc> = {
         ],
       },
       {
-        heading: "WhatsApp, email and third-party services",
+        heading: "WhatsApp, email and third party services",
         body: [
-          "Some forms open WhatsApp or your email application with your details pre-filled so you can send them to us. Messages sent this way are handled by those services under their own privacy policies.",
-          "This website may embed third-party content such as Google Maps and hosted video. These services may collect technical information (for example, your IP address) in line with their own policies.",
+          "Some forms open WhatsApp or your email application with your details pre filled so you can send them to us. Messages sent this way are handled by those services under their own privacy policies.",
+          "This website may embed third party content such as Google Maps and hosted video. These services may collect technical information (for example, your IP address) in line with their own policies.",
         ],
       },
       {
@@ -52,7 +52,7 @@ export const legalDocs: Record<LegalDoc["slug"], LegalDoc> = {
       {
         heading: "Data retention and security",
         body: [
-          "We keep your information only for as long as needed to handle your enquiry and any resulting sale or after-sales service, or as required by law. We take reasonable measures to protect it from unauthorised access, loss or misuse.",
+          "We keep your information only for as long as needed to handle your enquiry and any resulting sale or after sales service, or as required by law. We take reasonable measures to protect it from unauthorised access, loss or misuse.",
         ],
       },
       {
@@ -103,9 +103,9 @@ export const legalDocs: Record<LegalDoc["slug"], LegalDoc> = {
         ],
       },
       {
-        heading: "Third-party links",
+        heading: "Third party links",
         body: [
-          "This website may link to third-party websites and services (such as Google Maps, WhatsApp and social media). We are not responsible for their content or practices.",
+          "This website may link to third party websites and services (such as Google Maps, WhatsApp and social media). We are not responsible for their content or practices.",
         ],
       },
       {
