@@ -5,6 +5,7 @@ import { ArrowUpRight, Play } from "lucide-react";
 import { Section, Shell, Eyebrow } from "./Section";
 import { testimonials, type Testimonial } from "@/data/testimonials";
 import { VideoModal } from "@/components/ui/VideoModal";
+import { copy } from "@/content/site";
 
 /** A single video testimonial: poster + play button, opens the video on click. */
 function VideoCard({ t, onPlay }: { t: Testimonial; onPlay: (url: string) => void }) {
@@ -57,7 +58,7 @@ export function Testimonials({ preview = false }: { preview?: boolean }) {
           <div>
             <Eyebrow {...(preview ? { index: "08" } : {})}>Testimonials</Eyebrow>
             <h2 className="display mt-8 max-w-[18ch] text-[clamp(2rem,4.4vw,3.8rem)]" data-reveal>
-              Hear it from our clients.
+              {copy.testimonials.heading}
             </h2>
           </div>
           {preview && (

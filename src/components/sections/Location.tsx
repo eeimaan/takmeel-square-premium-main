@@ -2,6 +2,7 @@
 import { Section, Shell, Eyebrow } from "./Section";
 import { connectivity } from "@/data/amenities";
 import { site } from "@/data/navigation";
+import { copy } from "@/content/site";
 import { ArrowUpRight, MapPin, Navigation } from "lucide-react";
 
 export function Location({ headingAs: Heading = "h2" }: { headingAs?: "h1" | "h2" } = {}) {
@@ -11,14 +12,14 @@ export function Location({ headingAs: Heading = "h2" }: { headingAs?: "h1" | "h2
         {/* ---------- Header row ---------- */}
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
-            <Eyebrow index="07">Location & connectivity</Eyebrow>
+            <Eyebrow index="07">{copy.location.eyebrow}</Eyebrow>
             <Heading
               className="display mt-6 text-[clamp(1.75rem,3.4vw,3rem)] leading-[1.05]"
               data-reveal
             >
-              At the centre of
+              {copy.location.heading[0]}
               <br />
-              the city's growth.
+              {copy.location.heading[1]}
             </Heading>
           </div>
           <p
@@ -26,8 +27,7 @@ export function Location({ headingAs: Heading = "h2" }: { headingAs?: "h1" | "h2
             data-reveal
             data-reveal-delay="120"
           >
-            At the heart of DHA Bahawalpur, facing the Main Boulevard, 3.6 KM
-            from Bahawalpur Airport and 4.9 KM from Cantt.
+            {copy.location.note}
           </p>
         </div>
       </Shell>

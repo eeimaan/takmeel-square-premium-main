@@ -22,6 +22,7 @@ import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as TestimonialsRouteImport } from './routes/testimonials'
 import { Route as TourRouteImport } from './routes/tour'
+import { Route as LeadershipLeaderIdRouteImport } from './routes/leadership.$leaderId'
 import { Route as ProjectProjectIdRouteImport } from './routes/project.$projectId'
 
 const IndexRoute = IndexRouteImport.update({
@@ -89,6 +90,11 @@ const TourRoute = TourRouteImport.update({
   path: '/tour',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LeadershipLeaderIdRoute = LeadershipLeaderIdRouteImport.update({
+  id: '/leadership/$leaderId',
+  path: '/leadership/$leaderId',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProjectProjectIdRoute = ProjectProjectIdRouteImport.update({
   id: '/project/$projectId',
   path: '/project/$projectId',
@@ -109,6 +115,7 @@ export interface FileRoutesByFullPath {
   '/terms': typeof TermsRoute
   '/testimonials': typeof TestimonialsRoute
   '/tour': typeof TourRoute
+  '/leadership/$leaderId': typeof LeadershipLeaderIdRoute
   '/project/$projectId': typeof ProjectProjectIdRoute
 }
 export interface FileRoutesByTo {
@@ -125,6 +132,7 @@ export interface FileRoutesByTo {
   '/terms': typeof TermsRoute
   '/testimonials': typeof TestimonialsRoute
   '/tour': typeof TourRoute
+  '/leadership/$leaderId': typeof LeadershipLeaderIdRoute
   '/project/$projectId': typeof ProjectProjectIdRoute
 }
 export interface FileRoutesById {
@@ -142,6 +150,7 @@ export interface FileRoutesById {
   '/terms': typeof TermsRoute
   '/testimonials': typeof TestimonialsRoute
   '/tour': typeof TourRoute
+  '/leadership/$leaderId': typeof LeadershipLeaderIdRoute
   '/project/$projectId': typeof ProjectProjectIdRoute
 }
 export interface FileRouteTypes {
@@ -160,6 +169,7 @@ export interface FileRouteTypes {
     | '/terms'
     | '/testimonials'
     | '/tour'
+    | '/leadership/$leaderId'
     | '/project/$projectId'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -176,6 +186,7 @@ export interface FileRouteTypes {
     | '/terms'
     | '/testimonials'
     | '/tour'
+    | '/leadership/$leaderId'
     | '/project/$projectId'
   id:
     | '__root__'
@@ -192,6 +203,7 @@ export interface FileRouteTypes {
     | '/terms'
     | '/testimonials'
     | '/tour'
+    | '/leadership/$leaderId'
     | '/project/$projectId'
   fileRoutesById: FileRoutesById
 }
@@ -209,6 +221,7 @@ export interface RootRouteChildren {
   TermsRoute: typeof TermsRoute
   TestimonialsRoute: typeof TestimonialsRoute
   TourRoute: typeof TourRoute
+  LeadershipLeaderIdRoute: typeof LeadershipLeaderIdRoute
   ProjectProjectIdRoute: typeof ProjectProjectIdRoute
 }
 
@@ -305,6 +318,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TourRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/leadership/$leaderId': {
+      id: '/leadership/$leaderId'
+      path: '/leadership/$leaderId'
+      fullPath: '/leadership/$leaderId'
+      preLoaderRoute: typeof LeadershipLeaderIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/project/$projectId': {
       id: '/project/$projectId'
       path: '/project/$projectId'
@@ -329,6 +349,7 @@ const rootRouteChildren: RootRouteChildren = {
   TermsRoute: TermsRoute,
   TestimonialsRoute: TestimonialsRoute,
   TourRoute: TourRoute,
+  LeadershipLeaderIdRoute: LeadershipLeaderIdRoute,
   ProjectProjectIdRoute: ProjectProjectIdRoute,
 }
 export const routeTree = rootRouteImport

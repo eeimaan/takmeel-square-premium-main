@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { images } from "@/data/projects";
 import heroVideo from "@/../public/hero-video.mp4";
 import { Logo } from "@/components/brand/Logo";
+import { copy } from "@/content/site";
 import { scrollToSection } from "@/lib/animations/useSmoothScroll";
 import { loadGsap, prefersReducedMotion } from "@/lib/animations/gsap";
 
@@ -80,7 +81,7 @@ export function Hero() {
 
         <div ref={titleRef}>
           <h1 className="display mt-8 max-w-[18ch] text-[clamp(2.75rem,9vw,8.5rem)] text-ivory">
-            {["Takmeel", "Square"].map((word, i) => (
+            {copy.hero.titleWords.map((word, i) => (
               <span key={word} className="block overflow-hidden">
                 <span
                   className={`block transition-transform duration-[1400ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${
@@ -103,15 +104,14 @@ export function Hero() {
             style={{ transitionDelay: "1100ms" }}
           >
             <p className="max-w-md text-base leading-relaxed text-ivory/65">
-              The largest commercial hub of South Punjab, 1.2 million sq ft of
-              retail, business and leisure at the heart of DHA Bahawalpur.
+              {copy.hero.blurb}
             </p>
             <button
               type="button"
               onClick={() => scrollToSection("projects")}
               className="brand-hover brand-hover-outline justify-self-start border border-gold/60 px-8 py-4 text-[0.68rem] uppercase tracking-[0.28em] text-gold hover:border-gold md:justify-self-end"
             >
-              Explore projects
+              {copy.hero.cta}
             </button>
           </div>
         </div>

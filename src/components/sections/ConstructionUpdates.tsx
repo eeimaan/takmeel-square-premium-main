@@ -4,6 +4,7 @@ import { Play } from "lucide-react";
 import { Section, Shell, Eyebrow } from "./Section";
 import { constructionUpdates } from "@/data/updates";
 import { VideoModal } from "@/components/ui/VideoModal";
+import { copy } from "@/content/site";
 
 /** Development updates, newest first, video-based: each poster plays its update video. */
 export function ConstructionUpdates() {
@@ -14,13 +15,13 @@ export function ConstructionUpdates() {
       <Shell>
         <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_auto] md:items-end">
           <div>
-            <Eyebrow>Development updates</Eyebrow>
+            <Eyebrow>{copy.construction.eyebrow}</Eyebrow>
             <h2 className="display mt-8 max-w-[16ch] text-[clamp(2rem,4.4vw,3.8rem)]" data-reveal>
-              Watch Takmeel Square rise.
+              {copy.construction.heading}
             </h2>
           </div>
           <p className="max-w-xs text-base leading-relaxed text-muted-foreground" data-reveal data-reveal-delay="140">
-            Video progress from site, updated regularly so investors and owners can follow construction from anywhere.
+            {copy.construction.subtitle}
           </p>
         </div>
 

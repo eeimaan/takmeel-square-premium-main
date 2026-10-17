@@ -4,6 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import { Section, Shell, Eyebrow } from "@/components/sections/Section";
 import { RevealText } from "@/lib/animations/RevealText";
 import { projects } from "@/data/projects";
+import { copy } from "@/content/site";
 
 export function FeaturedProjects({ headingAs: Heading = "h2", omitId }: { headingAs?: "h1" | "h2"; omitId?: string } = {}) {
   return (
@@ -11,10 +12,10 @@ export function FeaturedProjects({ headingAs: Heading = "h2", omitId }: { headin
       <Shell>
         <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_auto] md:items-end">
           <div>
-            <Eyebrow index="03">Featured projects</Eyebrow>
+            <Eyebrow index="03">{copy.featuredProjects.eyebrow}</Eyebrow>
             <RevealText
               as={Heading}
-              text="Three destinations, one address"
+              text={copy.featuredProjects.heading}
               className="display mt-8 max-w-[14ch] text-[clamp(2rem,5vw,4.4rem)]"
             />
           </div>
@@ -23,8 +24,7 @@ export function FeaturedProjects({ headingAs: Heading = "h2", omitId }: { headin
             data-reveal
             data-reveal-delay="140"
           >
-            1.2 million sq ft of commerce, retail and homes, with 260 shops and
-            a 4 acre Glow Park, all at one address in DHA Bahawalpur.
+            {copy.featuredProjects.subtitle}
           </p>
         </div>
 

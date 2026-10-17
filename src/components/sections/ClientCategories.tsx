@@ -2,6 +2,7 @@
 import { Building2, Home } from "lucide-react";
 import { Section, Shell, Eyebrow } from "./Section";
 import { commercialClients, residentialClients, type Client } from "@/data/clients";
+import { copy } from "@/content/site";
 
 function ClientGrid({ clients }: { clients: Client[] }) {
   return (
@@ -26,9 +27,9 @@ export function ClientCategories() {
   return (
     <Section id="clients" className="py-14 md:py-20">
       <Shell>
-        <Eyebrow>Our clients</Eyebrow>
+        <Eyebrow>{copy.clients.eyebrow}</Eyebrow>
         <h2 className="display mt-8 max-w-[18ch] text-[clamp(2rem,4.4vw,3.8rem)]" data-reveal>
-          Trusted across every category.
+          {copy.clients.heading}
         </h2>
 
         {/* Commercial */}

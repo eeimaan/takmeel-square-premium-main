@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 import { Section, Shell, Eyebrow } from "@/components/sections/Section";
 import { lifestyleReel } from "@/data/projects";
 import { RevealText } from "@/lib/animations/RevealText";
+import { copy } from "@/content/site";
 import { loadGsap, prefersReducedMotion } from "@/lib/animations/gsap";
 
 type Frame = (typeof lifestyleReel)[number];
@@ -102,9 +103,9 @@ export function Gallery() {
         @media (prefers-reduced-motion: reduce){#lifestyle [data-tile] img{animation:none!important}}
       `}</style>
       <Shell className="pb-12 md:pb-16">
-        <Eyebrow index="09">Lifestyle</Eyebrow>
+        <Eyebrow index="09">{copy.gallery.eyebrow}</Eyebrow>
         <RevealText
-          text="The everyday, made a little better."
+          text={copy.gallery.heading}
           className="display mt-8 max-w-[16ch] text-[clamp(2rem,5vw,4.4rem)]"
         />
       </Shell>

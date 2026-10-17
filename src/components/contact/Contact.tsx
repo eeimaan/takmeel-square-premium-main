@@ -3,6 +3,7 @@ import { useState, type FormEvent } from "react";
 import { Check } from "lucide-react";
 import { Section, Shell, Eyebrow } from "@/components/sections/Section";
 import { offices, site } from "@/data/navigation";
+import { copy } from "@/content/site";
 
 const interests = [
   "Commercial Unit (4 Marla)",
@@ -31,9 +32,9 @@ export function Contact({ headingAs: Heading = "h2" }: { headingAs?: "h1" | "h2"
       <Shell>
         <div className="grid gap-16 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-24">
           <div>
-            <Eyebrow index="12">Contact</Eyebrow>
+            <Eyebrow index="12">{copy.contact.eyebrow}</Eyebrow>
             <Heading className="display mt-8 text-[clamp(2rem,4.6vw,4rem)]" data-reveal>
-              Let's talk about what you're looking for.
+              {copy.contact.heading}
             </Heading>
 
             <dl className="mt-14 flex flex-col gap-7">

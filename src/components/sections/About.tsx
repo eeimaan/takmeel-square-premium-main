@@ -3,12 +3,13 @@ import { Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { Section, Shell, Eyebrow } from "./Section";
 import { images } from "@/data/projects";
+import { copy } from "@/content/site";
 
 export function About({ headingAs: Heading = "h2" }: { headingAs?: "h1" | "h2" } = {}) {
   return (
     <Section id="about" className="pt-20 md:pt-28">
       <Shell>
-        <Eyebrow index="01">About Takmeel Square</Eyebrow>
+        <Eyebrow index="01">{copy.about.eyebrow}</Eyebrow>
 
         <div className="mt-12 grid gap-16 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] lg:gap-24">
           <Heading
@@ -16,22 +17,13 @@ export function About({ headingAs: Heading = "h2" }: { headingAs?: "h1" | "h2" }
             data-reveal
             data-reveal-delay="80"
           >
-            South Punjab's premier commercial hub.
+            {copy.about.heading}
           </Heading>
 
           <div className="flex flex-col gap-8 self-end" data-reveal data-reveal-delay="200">
-            <p className="text-base leading-relaxed text-muted-foreground">
-              Takmeel Square, encompassing 1.2 million square feet, is the largest
-              commercial hub of Southern Punjab, an inclusive integrated retail and
-              open market model, empowering investors and business owners to become
-              the architects of their future success.
-            </p>
-            <p className="text-base leading-relaxed text-muted-foreground">
-              Set within DHA Bahawalpur's sustainable, master planned community,
-              Takmeel Square brings together Takmeel Bazaar, Takmeel Homes and the
-              4 acre Glow Park, fostering business, elevating lifestyles and
-              shaping South Punjab's economic future.
-            </p>
+            {copy.about.paragraphs.map((p, i) => (
+              <p key={i} className="text-base leading-relaxed text-muted-foreground">{p}</p>
+            ))}
             <dl className="hidden grid-cols-3 gap-6 border-t border-border pt-8">
               {[
                 { k: "Sq ft", v: "1.2M" },
@@ -64,16 +56,16 @@ export function About({ headingAs: Heading = "h2" }: { headingAs?: "h1" | "h2" }
           <figcaption className="pointer-events-none absolute inset-x-0 bottom-10 md:bottom-16">
             <Shell className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between lg:gap-12">
               <span className="block">
-                <span className="eyebrow text-gold">Takmeel Square · DHA Bahawalpur</span>
+                <span className="eyebrow text-gold">{copy.about.bannerEyebrow}</span>
                 <span className="display mt-3 block max-w-2xl text-[clamp(2rem,4.6vw,4.6rem)] leading-[1.02] text-ivory">
-                  Largest commercial hub of Southern Punjab.
+                  {copy.about.bannerHeading}
                 </span>
                 <Link
                   to="/project/$projectId"
                   params={{ projectId: "takmeel-square" }}
                   className="brand-hover pointer-events-auto mt-6 inline-flex items-center gap-2.5 border border-gold px-7 py-3.5 text-[0.66rem] uppercase tracking-[0.24em] text-gold transition-colors hover:bg-gold hover:text-forest"
                 >
-                  Discover Takmeel Square <ArrowUpRight size={14} />
+                  {copy.about.discover} <ArrowUpRight size={14} />
                 </Link>
               </span>
               <span className="grid grid-cols-2 gap-x-8 gap-y-4 border-t border-ivory/20 pt-5 sm:grid-cols-4 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">

@@ -2,6 +2,7 @@
 import { Plus } from "lucide-react";
 import { Section, Shell, Eyebrow } from "./Section";
 import { faqs } from "@/data/faqs";
+import { copy } from "@/content/site";
 
 /** Frequently asked questions, same two-column layout and type scale as "Why Takmeel Square". */
 export function Faq() {
@@ -10,12 +11,12 @@ export function Faq() {
       <Shell>
         <div className="grid gap-12 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-20">
           <div>
-            <Eyebrow>FAQs</Eyebrow>
+            <Eyebrow>{copy.faq.eyebrow}</Eyebrow>
             <h2 className="display mt-8 text-[clamp(2rem,4.4vw,3.8rem)]" data-reveal>
-              Questions buyers and investors ask.
+              {copy.faq.heading}
             </h2>
             <p className="mt-6 max-w-sm text-base leading-relaxed text-muted-foreground" data-reveal>
-              Can't find what you're looking for? Call UAN +92 311 1555559 or email info@takmeel.pk.
+              {copy.faq.help}
             </p>
           </div>
 
