@@ -39,9 +39,15 @@ export function Shell({
 export function Eyebrow({ index, children }: { index?: string; children: ReactNode }) {
   return (
     <div className="flex items-center gap-4" data-reveal>
-      {index ? <span className="eyebrow text-gold-deep">{index}</span> : null}
-      <span className="h-px w-10 bg-gold/60" />
-      <span className="eyebrow">{children}</span>
+      {index ? (
+        <span className="eyebrow text-gold-deep" style={{ fontSize: "0.8rem" }}>
+          {index}
+        </span>
+      ) : null}
+      <span className="h-px w-12 bg-gold/60" />
+      <span className="eyebrow" style={{ fontSize: "0.8rem" }}>
+        {children}
+      </span>
     </div>
   );
 }
