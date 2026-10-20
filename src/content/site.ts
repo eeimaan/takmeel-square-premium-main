@@ -66,7 +66,7 @@ export const navItems: NavItem[] = [
     target: "projects",
     href: "/projects",
     children: [
-      { label: "Takmeel Square", href: "/projects#takmeel-square" },
+      { label: "Takmeel Square", href: "/project/takmeel-square" },
       { label: "Takmeel Bazaar", href: "/projects#takmeel-bazaar" },
       { label: "Takmeel Homes", href: "/projects#takmeel-homes" },
       { label: "Glow Park", href: "/project/glow-park" },
@@ -82,6 +82,7 @@ export const navItems: NavItem[] = [
       { label: "Takmeel Bazaar", href: "/tour#tour-bazaar" },
       { label: "Glow Park", href: "/tour#tour-park" },
       { label: "Rooftop Restaurants", href: "/tour#tour-restaurants" },
+      { label: "Al-Fatah", href: "/tour#tour-alfatah" },
     ],
   },
   { label: "Contact", target: "contact", href: "/contact" },

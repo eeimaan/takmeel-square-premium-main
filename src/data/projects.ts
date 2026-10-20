@@ -87,8 +87,42 @@ import renGlowEntrance from "../assets/takmeel/ren/glow-entrance.jpg";
 import renGlowParking from "../assets/takmeel/ren/glow-parking.jpg";
 import renGlowFoodcourt from "../assets/takmeel/ren/glow-foodcourt.jpg";
 import renGlowDay from "../assets/takmeel/ren/glow-day.jpg";
+// New renders (Oct 2026): boulevard closer looks, Glow Park & Al-Fatah
+import renSqGate from "../assets/takmeel/ren/sq-gate.jpg";
+import renSqBlvdAerial from "../assets/takmeel/ren/sq-blvd-aerial.jpg";
+import renSqBlvdSiena from "../assets/takmeel/ren/sq-blvd-siena.jpg";
+import renSqBlvdAlasia from "../assets/takmeel/ren/sq-blvd-alasia.jpg";
+import renGlowTeddy from "../assets/takmeel/ren/glow-teddy.jpg";
+import renGlowFoodcourtDay from "../assets/takmeel/ren/glow-foodcourt-day.jpg";
+import renGlowArches from "../assets/takmeel/ren/glow-arches.jpg";
+import renGlowElephant from "../assets/takmeel/ren/glow-elephant.jpg";
+import renGlowAmphitheatre from "../assets/takmeel/ren/glow-amphitheatre.jpg";
+import renGlowFountains from "../assets/takmeel/ren/glow-fountains.jpg";
+import renRooftopDusk from "../assets/takmeel/ren/rooftop-dusk.jpg";
+import renAlfatahDusk from "../assets/takmeel/ren/alfatah-dusk.jpg";
+import renAlfatahFacade from "../assets/takmeel/ren/alfatah-facade.jpg";
+import renAlfatahAerial from "../assets/takmeel/ren/alfatah-aerial.jpg";
+import renAlfatahFront from "../assets/takmeel/ren/alfatah-front.jpg";
+import renAlfatahStreet from "../assets/takmeel/ren/alfatah-street.jpg";
 
 export const images = {
+  // New renders (Oct 2026)
+  renSqGate,
+  renSqBlvdAerial,
+  renSqBlvdSiena,
+  renSqBlvdAlasia,
+  renGlowTeddy,
+  renGlowFoodcourtDay,
+  renGlowArches,
+  renGlowElephant,
+  renGlowAmphitheatre,
+  renGlowFountains,
+  renRooftopDusk,
+  renAlfatahDusk,
+  renAlfatahFacade,
+  renAlfatahAerial,
+  renAlfatahFront,
+  renAlfatahStreet,
   // New high-quality renders
   renGlowDay,
   renSqAerial,
@@ -248,7 +282,7 @@ export const projects: Project[] = [
     status: "Leisure",
     description:
       "Four illuminated acres of gardens, walkways and open air dining beside Takmeel Square, where the evenings come alive.",
-    image: images.renGlowWalk,
+    image: images.renGlowTeddy,
     stats: [
       { label: "Area", value: "4 Acres" },
       { label: "Seating", value: "600" },
@@ -266,11 +300,11 @@ export interface GalleryItem {
 export const projectGalleries: Record<string, GalleryItem[]> = {
   "takmeel-square": [
     { src: images.renSqAerial, name: "Aerial view" },
+    { src: images.renSqGate, name: "Grand entrance gate" },
     { src: images.renSqDistrict, name: "Commercial district" },
     { src: images.renSqBoulevard, name: "Main Boulevard" },
-    { src: images.squareCanopyStreet, name: "Canopy street" },
-    { src: images.squareSunsetCourt, name: "Central court" },
-    { src: images.squareCafeCanopy, name: "Café under the canopies" },
+    { src: images.renSqBlvdSiena, name: "Boulevard dining terraces" },
+    { src: images.renSqBlvdAlasia, name: "Boulevard at dusk" },
   ],
   "takmeel-bazaar": [
     { src: images.renBzBoulevard, name: "Bazaar boulevard" },
@@ -289,12 +323,12 @@ export const projectGalleries: Record<string, GalleryItem[]> = {
     { src: images.houseLawn, name: "Private lawn" },
   ],
   "glow-park": [
-    { src: images.renGlowWalk, name: "Park walkway" },
-    { src: images.renGlowEvening, name: "Evening piazza" },
-    { src: images.renGlowOasis, name: "Horticultural oasis" },
+    { src: images.renGlowTeddy, name: "Signature topiary garden" },
+    { src: images.renGlowElephant, name: "Topiary promenade" },
+    { src: images.renGlowAmphitheatre, name: "Open-air amphitheatre" },
+    { src: images.renGlowFountains, name: "Fountain court" },
+    { src: images.renGlowFoodcourtDay, name: "Food court" },
     { src: images.renGlowRestaurant, name: "Park restaurant" },
-    { src: images.renGlowEntrance, name: "Park entrance" },
-    { src: images.renGlowFoodcourt, name: "Food court" },
   ],
 };
 

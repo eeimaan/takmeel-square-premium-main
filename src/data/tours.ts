@@ -80,6 +80,19 @@ import renGlowFoodcourt from "../assets/takmeel/ren/glow-foodcourt.jpg";
 import renGym from "../assets/takmeel/ren/gym.jpg";
 import renGym2 from "../assets/takmeel/ren/gym2.jpg";
 import renCoffee from "../assets/takmeel/ren/coffee.jpg";
+// New renders (Oct 2026)
+import renSqGate from "../assets/takmeel/ren/sq-gate.jpg";
+import renGlowFoodcourtDay from "../assets/takmeel/ren/glow-foodcourt-day.jpg";
+import renGlowArches from "../assets/takmeel/ren/glow-arches.jpg";
+import renGlowElephant from "../assets/takmeel/ren/glow-elephant.jpg";
+import renGlowAmphitheatre from "../assets/takmeel/ren/glow-amphitheatre.jpg";
+import renGlowFountains from "../assets/takmeel/ren/glow-fountains.jpg";
+import renRooftopDusk from "../assets/takmeel/ren/rooftop-dusk.jpg";
+import renAlfatahDusk from "../assets/takmeel/ren/alfatah-dusk.jpg";
+import renAlfatahFacade from "../assets/takmeel/ren/alfatah-facade.jpg";
+import renAlfatahAerial from "../assets/takmeel/ren/alfatah-aerial.jpg";
+import renAlfatahFront from "../assets/takmeel/ren/alfatah-front.jpg";
+import renAlfatahStreet from "../assets/takmeel/ren/alfatah-street.jpg";
 
 export interface TourScene {
   id: string;
@@ -92,7 +105,7 @@ export interface TourScene {
 export interface TourProperty {
   /** Matches the URL hash: /tour#tour-{id} */
   id: string;
-  category: "Square" | "Homes" | "Bazaar" | "Park" | "Restaurants" | "Gym" | "Café";
+  category: "Square" | "Homes" | "Bazaar" | "Park" | "Restaurants" | "Al-Fatah" | "Gym" | "Café";
   name: string;
   location: string;
   scenes: TourScene[];
@@ -107,10 +120,22 @@ export const tours: TourProperty[] = [
     location: "DHA Bahawalpur",
     scenes: [
       {
+        id: "gate",
+        title: "Grand entrance gate",
+        image: renSqGate,
+        links: [
+          { to: "r-aerial", x: 52, y: 58, label: "Fly over Takmeel Square" },
+          { to: "boulevard", x: 78, y: 70, label: "Onto the Main Boulevard" },
+        ],
+      },
+      {
         id: "r-aerial",
         title: "Takmeel Square, aerial view",
         image: renSqAerial,
-        links: [{ to: "boulevard", x: 62, y: 66, label: "Arrive on the Main Boulevard" }],
+        links: [
+          { to: "boulevard", x: 62, y: 66, label: "Arrive on the Main Boulevard" },
+          { to: "gate", x: 12, y: 85, label: "Back to the entrance gate" },
+        ],
       },
       {
         id: "boulevard",
@@ -663,8 +688,44 @@ export const tours: TourProperty[] = [
         title: "Horticultural oasis",
         image: renGlowOasis,
         links: [
-          { to: "p-evening", x: 65, y: 60, label: "The park by evening" },
+          { to: "p-topiary", x: 65, y: 60, label: "Signature topiary garden" },
           { to: "p-walk", x: 12, y: 85, label: "Back to the walkways" },
+        ],
+      },
+      {
+        id: "p-topiary",
+        title: "Signature topiary garden",
+        image: renGlowArches,
+        links: [
+          { to: "p-promenade", x: 65, y: 60, label: "Topiary promenade" },
+          { to: "p-oasis", x: 12, y: 85, label: "Back to the oasis" },
+        ],
+      },
+      {
+        id: "p-promenade",
+        title: "Topiary promenade",
+        image: renGlowElephant,
+        links: [
+          { to: "p-amphitheatre", x: 65, y: 60, label: "Open-air amphitheatre" },
+          { to: "p-topiary", x: 12, y: 85, label: "Back to the topiary garden" },
+        ],
+      },
+      {
+        id: "p-amphitheatre",
+        title: "Open-air amphitheatre",
+        image: renGlowAmphitheatre,
+        links: [
+          { to: "p-foodcourt", x: 65, y: 60, label: "Glow Park food court" },
+          { to: "p-promenade", x: 12, y: 85, label: "Back to the promenade" },
+        ],
+      },
+      {
+        id: "p-foodcourt",
+        title: "Glow Park food court",
+        image: renGlowFoodcourtDay,
+        links: [
+          { to: "p-evening", x: 65, y: 60, label: "The park by evening" },
+          { to: "p-amphitheatre", x: 12, y: 85, label: "Back to the amphitheatre" },
         ],
       },
       {
@@ -743,7 +804,6 @@ export const tours: TourProperty[] = [
         image: restaurantStreet,
         links: [
           { to: "rooftop", x: 60, y: 30, label: "Go up to the rooftop" },
-          { to: "food-court", x: 15, y: 70, label: "Glow Park food court" },
         ],
       },
       {
@@ -751,8 +811,18 @@ export const tours: TourProperty[] = [
         title: "Rooftop lounge",
         image: rooftopLounge,
         links: [
-          { to: "rooftop-court", x: 80, y: 60, label: "Rooftop food court" },
+          { to: "rooftop-dusk", x: 62, y: 58, label: "Rooftop lounge at dusk" },
+          { to: "rooftop-court", x: 82, y: 60, label: "Rooftop food court" },
           { to: "street", x: 15, y: 85, label: "Back to street" },
+        ],
+      },
+      {
+        id: "rooftop-dusk",
+        title: "Rooftop lounge at dusk",
+        image: renRooftopDusk,
+        links: [
+          { to: "rooftop-court", x: 70, y: 60, label: "Rooftop food court" },
+          { to: "rooftop", x: 15, y: 85, label: "Back to the lounge" },
         ],
       },
       {
@@ -764,11 +834,54 @@ export const tours: TourProperty[] = [
           { to: "street", x: 70, y: 85, label: "Go downstairs" },
         ],
       },
+    ],
+  },
+
+  /* ------------------------------ AL-FATAH ----------------------------- */
+  {
+    id: "alfatah",
+    category: "Al-Fatah",
+    name: "Al-Fatah, flagship department store",
+    location: "Takmeel Square, DHA Bahawalpur",
+    scenes: [
       {
-        id: "food-court",
-        title: "Glow Park food court",
-        image: foodCourt,
-        links: [{ to: "street", x: 80, y: 80, label: "Back to restaurant street" }],
+        id: "af-street",
+        title: "Al-Fatah, street approach",
+        image: renAlfatahStreet,
+        links: [{ to: "af-dusk", x: 62, y: 62, label: "Walk up to the store" }],
+      },
+      {
+        id: "af-dusk",
+        title: "Al-Fatah at dusk",
+        image: renAlfatahDusk,
+        links: [
+          { to: "af-facade", x: 64, y: 60, label: "Illuminated facade" },
+          { to: "af-street", x: 12, y: 85, label: "Back to the street" },
+        ],
+      },
+      {
+        id: "af-facade",
+        title: "Illuminated facade",
+        image: renAlfatahFacade,
+        links: [
+          { to: "af-front", x: 64, y: 60, label: "Main entrance" },
+          { to: "af-dusk", x: 12, y: 85, label: "Back" },
+        ],
+      },
+      {
+        id: "af-front",
+        title: "Main entrance",
+        image: renAlfatahFront,
+        links: [
+          { to: "af-aerial", x: 64, y: 58, label: "Aerial view" },
+          { to: "af-facade", x: 12, y: 85, label: "Back to the facade" },
+        ],
+      },
+      {
+        id: "af-aerial",
+        title: "Al-Fatah, aerial view",
+        image: renAlfatahAerial,
+        links: [{ to: "af-street", x: 20, y: 80, label: "Back to the start" }],
       },
     ],
   },
